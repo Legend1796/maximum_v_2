@@ -2,7 +2,7 @@ import "./app.css";
 import Main from "../../pages/main";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-// import ScrollToTop from "../scroll-to-top/scroll-to-top";
+import Header from "../header/header";
 
 function App() {
   const [pageWidth, setPageWidth] = useState(document.documentElement.scrollWidth);
@@ -20,7 +20,7 @@ function App() {
   }, [pageWidth]);
   return (
     <div className="App">
-      {/* <Header pageWidth={pageWidth} /> */}
+      <Header pageWidth={pageWidth} />
       {/* <ScrollToTop height={0} /> */}
       <Routes>
         <Route exact path="/" element={<Main pageWidth={pageWidth} />} />
