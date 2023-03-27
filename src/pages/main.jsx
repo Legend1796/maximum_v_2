@@ -4,10 +4,15 @@
 // import Steps from "../../src/components/steps/steps";
 // import Why from "../../src/components/whyus/why";
 
+import Promo from "../components/promo/promo";
+import Title from "../components/title/title";
+
 function Main({ pageWidth }) {
   return (
     <div className="Main">
-      {/* <Promo />
+      <Title />
+      <Promo />
+      {/* 
       <About pageWidth={pageWidth} />
       <Steps pageWidth={pageWidth} />
       <Why />

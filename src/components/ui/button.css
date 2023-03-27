@@ -1,0 +1,26 @@
+.button {
+    width: 160px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    align-self: start;
+}
+
+.button_primary {
+    background-color: var(--color-yellow);
+}
+
+.button_file {
+    margin-top: 19px;
+    margin-bottom: 22px;
+    color: #FFFFFF;
+    background-color: var(--color-black);
+}

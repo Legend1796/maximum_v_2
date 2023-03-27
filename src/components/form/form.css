@@ -1,0 +1,87 @@
+.react-dadata__input {
+    padding-left: 15px;
+    width: 360px;
+    height: 40px;
+    background-color: var(--color-white);
+    color: #232323;
+    border: 1px solid var(--color-underline);
+    border-radius: 10px;
+    outline: none;
+    position: relative;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+/* .react-dadata__input:focus {
+    box-shadow: none;
+    border: 1px solid var(--color-black);
+    outline: none;
+} */
+
+.form__input-phone {
+    padding-left: 18px !important;
+    width: 360px !important;
+    height: 40px !important;
+    background-color: var(--color-white) !important;
+    color: #232323 !important;
+    border: 1px solid var(--color-underline) !important;
+    border-radius: 10px !important;
+    outline: none !important;
+    font-family: 'Montserrat' !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 17px !important;
+}
+
+.form__input-phone-button {
+    display: none !important;
+}
+
+.input__container {
+    margin: 35px auto 21px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form__container {
+    padding: 37px 30px 44px;
+    width: 420px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__title {
+    width: 328px;
+    margin: 0 auto 21px;
+}
+
+.form__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    width: 359px;
+}
+
+.form__text {
+    align-self: start;
+    width: 310px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.form__text_agreement {
+    width: 359px;
+    margin-top: 33px;
+}
+
+.form__agreement-text-link {
+    color: var(--color-blue);
+}

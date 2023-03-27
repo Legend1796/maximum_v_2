@@ -8,6 +8,7 @@
 
 :root {
     --color-grey: #797979;
+    --color-underline: #D9D9D9;
     --color-black: #4D4D4D;
     --color-blue: #2FBAE5;
     --color-white: #FFFFFF;
@@ -15,20 +16,36 @@
 }
 
 h1 {
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 122px;
+    text-transform: uppercase;
     color: #4C4C4C;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
 }
 
 body, button {
     font-family: "Montserrat", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-button {
-    cursor: pointer;
-    outline: none;
-    border: none;
-    background: none;
 }
 
 /* button:hover {

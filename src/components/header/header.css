@@ -1,10 +1,28 @@
 .header__container {
-    width: 1375px;
-    margin: 48px auto 70px;
+    width: 1160px;
+    margin: 20px auto 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
+    border-bottom: 1px solid var(--color-underline);
+    padding-bottom: 33px;
+}
+
+.header__logo-and-desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__description {
+    justify-self: flex-start;
+    margin-left: 14px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    width: 222px;
+    text-align: start;
 }
 
 .header__modal {
@@ -14,11 +32,6 @@
     top: 44px;
     padding: 20px 24px;
     background-color: var(--color-blue);
-}
-
-.header__links {
-    display: flex;
-    gap: 20px;
 }
 
 .header__link {
@@ -35,6 +48,7 @@
 
 .header__link_phone {
     margin-left: 45px;
+    margin-right: 10px;
 }
 
 .header__link_modal {
@@ -46,7 +60,7 @@
 .header__contacts {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 20px;
 }
 
 .header__image {
