@@ -69,6 +69,7 @@ const Form = () => {
               autoFocus: true,
             }}
           />
+          <textarea className="form__textarea" name="textarea" id="textarea" cols="30" rows="5"></textarea>
         </div>
         <p className="form__text">Техническое задание, Invoice, Packing list если есть</p>
         <Button type="button" typeButton="file">

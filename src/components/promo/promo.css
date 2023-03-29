@@ -2,4 +2,52 @@
     width: 1160px;
     display: flex;
     margin: 96px auto 146px;
+    justify-content: space-between;
+}
+
+.promo__image-and-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+}
+
+.promo__text-block {
+    max-width: 300px;
+    text-align: left;
+}
+
+.promo__button-text-blocks {
+    display: flex;
+}
+
+.promo__image {
+    max-width: 523.7px;
+    max-height: 586px;
+    margin-top: 19px;
+    margin-bottom: 15px;
+}
+
+.promo__text-title {
+    margin-bottom: 7px;
+}
+
+.promo__text-block_m {
+    width: 200px;
+    margin-right: 157px;
+}
+
+.promo__text-block_absolute {
+    position: absolute;
+}
+
+.promo__text-block_top {
+    top: 100px;
+    right: 10px;
+}
+
+.promo__text-block_right {
+    top: 295px;
+    right: -10px;
+    width: 170px;
 }
