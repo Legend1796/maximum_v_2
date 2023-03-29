@@ -28,24 +28,35 @@ h2 {
     font-size: 36px;
     line-height: 44px;
     text-transform: uppercase;
+    color: var(--color-black);
 }
 
 h3 {
     font-weight: 700;
     font-size: 36px;
     line-height: 44px;
+    color: var(--color-black);
 }
 
 h4 {
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
+    color: var(--color-black);
+}
+
+h5 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--color-black);
 }
 
 h6 {
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
+    color: var(--color-black);
 }
 
 body, button {

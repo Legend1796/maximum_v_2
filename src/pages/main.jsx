@@ -4,6 +4,7 @@
 // import Steps from "../../src/components/steps/steps";
 // import Why from "../../src/components/whyus/why";
 
+import Experience from "../components/experience/experience";
 import Promo from "../components/promo/promo";
 import Title from "../components/title/title";
 
@@ -12,6 +13,7 @@ function Main({ pageWidth }) {
     <div className="Main">
       <Title />
       <Promo />
+      <Experience />
       {/* 
       <About pageWidth={pageWidth} />
       <Steps pageWidth={pageWidth} />
