@@ -80,7 +80,7 @@ const Experience = () => {
             <p className="exp__text">Запчасти для станков лазерной резки</p>
           </li>
         </ul>
-        <h3 className="exp__bottom-title">Мне нужно металлообрабатывающее оборудование</h3>
+        <h4 className="exp__bottom-title">Мне нужно металлообрабатывающее оборудование</h4>
         <div className="bottom__container">
           <Button type="button" typeButton="primary">
             <p>Оставить заявку</p>
