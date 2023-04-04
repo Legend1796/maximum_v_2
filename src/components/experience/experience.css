@@ -6,3 +6,35 @@
 .exp__subtitle {
     margin: 23px auto 90px;
 }
+
+.exp__grid-container {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 60px;
+    column-gap: 43px;
+}
+
+.exp__grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.exp__text {
+    margin-top: 19px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.exp__bottom-title {
+    margin: 100px auto 32px;
+}
+
+.bottom__container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
