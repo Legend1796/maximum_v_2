@@ -65,12 +65,11 @@ body, button {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* button:hover {
-    background-color: #29ABD3;
+button:hover {
+    background-color: #CA9B2B;
     color: #ffffff;
 }
 
 button:active {
-    background-color: #2FBAE5;
-    box-shadow: inset 3px 4px 4px rgba(0, 0, 0, 0.15);
-} */
+    background-color: #936E00;
+}

@@ -78,9 +78,15 @@
     margin-top: 40px;
 }
 
-.economy__button:active {
+
+.economy__button:hover {
     color: var(--color-white);
     background-color: #026786;
+}
+
+.economy__button:active {
+    color: var(--color-white);
+    background-color: #139DC8;
 }
 
 .economy__bottom {

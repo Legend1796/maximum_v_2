@@ -6,6 +6,7 @@
 
 import Economy from "../components/economy/economy";
 import Experience from "../components/experience/experience";
+import Manager from "../components/manager/manager";
 import Promo from "../components/promo/promo";
 import Title from "../components/title/title";
 
@@ -16,6 +17,7 @@ function Main({ pageWidth }) {
       <Promo />
       <Experience />
       <Economy />
+      <Manager />
       {/* 
       <About pageWidth={pageWidth} />
       <Steps pageWidth={pageWidth} />
