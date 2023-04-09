@@ -6,9 +6,12 @@
 
 import Economy from "../components/economy/economy";
 import Experience from "../components/experience/experience";
+import Found from "../components/found/found";
 import Manager from "../components/manager/manager";
 import Promo from "../components/promo/promo";
+import Seller from "../components/seller/seller";
 import Title from "../components/title/title";
+import Variants from "../components/variants/variants";
 
 function Main({ pageWidth }) {
   return (
@@ -18,10 +21,10 @@ function Main({ pageWidth }) {
       <Experience />
       <Economy />
       <Manager />
+      <Seller />
+      <Variants />
+      <Found />
       {/* 
-      <About pageWidth={pageWidth} />
-      <Steps pageWidth={pageWidth} />
-      <Why />
       <Form pageWidth={pageWidth} /> */}
     </div>
   );

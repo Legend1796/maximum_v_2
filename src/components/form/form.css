@@ -57,8 +57,11 @@
 }
 
 .form__title {
-    width: 328px;
+    width: 338px;
     margin: 0 auto 21px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
 }
 
 .form__subtitle {
