@@ -4,6 +4,7 @@
 // import Steps from "../../src/components/steps/steps";
 // import Why from "../../src/components/whyus/why";
 
+import Doubts from "../components/doubts/doubts";
 import Economy from "../components/economy/economy";
 import Experience from "../components/experience/experience";
 import Found from "../components/found/found";
@@ -24,6 +25,7 @@ function Main({ pageWidth }) {
       <Seller />
       <Variants />
       <Found />
+      <Doubts />
       {/* 
       <Form pageWidth={pageWidth} /> */}
     </div>

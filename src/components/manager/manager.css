@@ -1,5 +1,6 @@
 .manager {
     margin: 120px auto;
+    overflow: hidden;
 }
 
 .manager__container {
@@ -28,6 +29,7 @@
     border-radius: 20px;
     overflow: hidden;
     padding: 40px;
+    
 }
 
 .manager__photo {
@@ -42,11 +44,26 @@
 }
 
 .manager__managers {
+    overflow: hidden;
+}
+
+ul {
+    margin-right: 40px;
+}
+
+.manager__managers .manager__managers-container {
+    width: 3520px;
     display: flex;
-    gap: 40px;
     flex-direction: row;
     padding: 64px 0;
     overflow: auto;
+    animation: slideText 15s linear infinite;
+}
+
+.manager__managers ul {
+    width: 1760px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .manager__works {
@@ -71,3 +88,13 @@
     display: flex;
     margin-bottom: 65px;
 }
+
+@keyframes slideText {
+    0% {
+      transform: translateX(0%);
+    }
+  
+    100% {
+      transform: translateX(-50%);
+    }
+  }
