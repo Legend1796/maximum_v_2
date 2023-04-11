@@ -7,6 +7,7 @@
 import Doubts from "../components/doubts/doubts";
 import Economy from "../components/economy/economy";
 import Experience from "../components/experience/experience";
+import Footer from "../components/footer/footer";
 import Found from "../components/found/found";
 import Manager from "../components/manager/manager";
 import Promo from "../components/promo/promo";
@@ -26,6 +27,7 @@ function Main({ pageWidth }) {
       <Variants />
       <Found />
       <Doubts />
+      <Footer />
       {/* 
       <Form pageWidth={pageWidth} /> */}
     </div>
