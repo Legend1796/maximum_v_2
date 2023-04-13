@@ -10,6 +10,7 @@ import Experience from "../components/experience/experience";
 import Footer from "../components/footer/footer";
 import Found from "../components/found/found";
 import Manager from "../components/manager/manager";
+import NotSellers from "../components/not-sellers/not-sellers";
 import Promo from "../components/promo/promo";
 import Seller from "../components/seller/seller";
 import Title from "../components/title/title";
@@ -20,6 +21,7 @@ function Main({ pageWidth }) {
     <div className="Main">
       <Title />
       <Promo />
+      <NotSellers />
       <Experience />
       <Economy />
       <Manager />

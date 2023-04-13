@@ -1,0 +1,55 @@
+.not-sellers {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-sellers-container {
+    width: 1160px;
+    overflow: auto;
+}
+
+.not-sellers__title {
+    color: var(--color-blue)
+}
+
+.not-sellers__subtitle {
+    width: 819px;
+    margin-top: 16px;
+    margin-bottom: 44px;
+}
+
+.not-sellers__card {
+    margin: 20px;
+    width: 360px;
+    padding: 47px 39px 39px 39px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: left;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+
+.not-sellers__photo {
+    width: 100px;
+    height: 100px;
+}
+
+.not-sellers__card-title {
+    width: 235px;
+    height: 47px;
+    margin-top: 31px;
+    margin-bottom: 22px;
+}
+
+.not-sellers__card-text {
+    width: 283px;
+}
+
+.not-sellers__cards {
+    display: flex;
+    /* gap: 40px; */
+}
