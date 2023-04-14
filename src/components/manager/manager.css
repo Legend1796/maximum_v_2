@@ -1,0 +1,106 @@
+.manager {
+    margin: 120px auto;
+    overflow: hidden;
+}
+
+.manager__container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.manager__button-container {
+    width: 160px;
+    margin: 0 auto;
+    align-self: center;
+}
+
+.manager__title {
+    width: 652px;
+    margin: 0 auto;
+}
+
+.manager__man {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    min-width: 400px;
+    height: 200px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 40px;
+    
+}
+
+.manager__button-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.manager__photo {
+    min-width: 120px;
+    height: 120px;
+    border-radius: 60px;
+}
+
+.manager__about {
+    text-align: left;
+    margin-left: 24px;
+}
+
+.manager__managers {
+    overflow: hidden;
+}
+
+ul {
+    margin-right: 40px;
+}
+
+.manager__managers .manager__managers-container {
+    width: 3520px;
+    display: flex;
+    flex-direction: row;
+    padding: 64px 0;
+    overflow: auto;
+    animation: slideText 15s linear infinite;
+}
+
+.manager__managers ul {
+    width: 1760px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.manager__works {
+    height: 200px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.manager__work {
+    display: flex;
+}
+
+.manager__text {
+    text-align: left;
+    margin-left: 24px;
+    width: 460px;
+}
+
+.manager__desc {
+    display: flex;
+    margin-bottom: 65px;
+}
+
+@keyframes slideText {
+    0% {
+      transform: translateX(0%);
+    }
+  
+    100% {
+      transform: translateX(-50%);
+    }
+  }

@@ -1,0 +1,51 @@
+.doubts__header {
+    background-color: #F9F9F9;
+    padding: 64px 0 59px;
+}
+
+.doubts__header-title {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 65px;
+}
+
+.doubts__header-subtitle {
+    width: 1060px;
+    margin: 24px auto 32px;
+}
+
+.doubts {
+    padding: 120px 0;
+}
+
+.doubts__container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.doubts__column {
+    position: relative;
+}
+
+.doubts__absolute-text {
+    text-align: left;
+    position: absolute;
+}
+
+.doubts__column .doubts__absolute-text:nth-child(3) {
+    top: 130px;
+    width: 200px;
+    left: 0;
+}
+
+.doubts__column .doubts__absolute-text:nth-child(4) {
+    top: 130px;
+    width: 205px;
+    right: -166px;
+}
+
+.doubts__column .doubts__absolute-text:nth-child(5) {
+    bottom: 50px;
+    width: 332px;
+    left: 0x;
+}
