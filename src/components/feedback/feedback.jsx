@@ -1,8 +1,8 @@
 import React from "react";
 import "./feedback.css";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import "owl.carousel/dist/assets/jquery.min.js";
+// import "owl.carousel/dist/assets/owl.carousel.css";
+// import "owl.carousel/dist/assets/owl.theme.default.css";
+// import "owl.carousel/dist/assets/jquery.min.js";
 
 import OwlCarousel from "react-owl-carousel";
 
@@ -17,7 +17,7 @@ const Feedback = () => {
           условиями и ходом поставки.
         </h5>
         <div className="feedback__slider">
-          <OwlCarousel loop margin={10} nav>
+          {/* <OwlCarousel loop margin={10} nav>
             <div class="item">
               <h4>1</h4>
             </div>
@@ -30,7 +30,7 @@ const Feedback = () => {
             <div class="item">
               <h4>4</h4>
             </div>
-          </OwlCarousel>
+          </OwlCarousel> */}
         </div>
       </div>
     </section>
