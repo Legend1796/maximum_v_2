@@ -32,6 +32,12 @@
     
 }
 
+.manager__button-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
 .manager__photo {
     min-width: 120px;
     height: 120px;

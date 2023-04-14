@@ -4,12 +4,13 @@
 }
 
 .doubts__header-title {
-    text-align: left;
+    text-align: center;
     margin-top: 25px;
     margin-bottom: 65px;
 }
 
 .doubts__header-subtitle {
+    width: 1060px;
     margin: 24px auto 32px;
 }
 

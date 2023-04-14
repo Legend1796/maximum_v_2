@@ -114,7 +114,7 @@ const Manager = () => {
         </div>
         <div className="manager__button-container">
           <Button type="button" typeButton="primary">
-            <p>Оставить заявку</p>
+            <p className="manager__button-text">Оставить заявку</p>
           </Button>
         </div>
       </div>

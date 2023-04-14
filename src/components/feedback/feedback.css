@@ -1,0 +1,13 @@
+.feedback {
+    margin-top: 120px;
+}
+
+.feedback__container {
+    width: 1290px;
+    margin: 0 auto;
+}
+
+.feedback__subtitle  {
+    margin: 24px auto 64px;
+    width: 1039px;
+}
