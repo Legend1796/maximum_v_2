@@ -4,7 +4,7 @@ import "./feedback.css";
 // import "owl.carousel/dist/assets/owl.theme.default.css";
 // import "owl.carousel/dist/assets/jquery.min.js";
 
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 
 const Feedback = () => {
   return (
