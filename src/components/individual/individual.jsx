@@ -13,6 +13,7 @@ const Individual = () => {
     margin: 0,
     dots: true,
     nav: true,
+    // navContainer: true,
   };
 
   return (
@@ -20,7 +21,7 @@ const Individual = () => {
       <div className="individual__container">
         <h2 className="individual__title">Инвивидуальный подход к каждой поставке</h2>
         <h4 className="individual__subtitle">Примеры доставленного оборудования</h4>
-        <OwlCarousel className="owl-theme" {...options}>
+        <OwlCarousel className="owl-carousel owl-theme" {...options}>
           {data.map((company) => (
             <Item company={company} key={company.id} />
           ))}

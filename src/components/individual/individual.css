@@ -44,3 +44,25 @@
     background-color: #D9D9D9;
     border-radius: 20px;
 }
+
+.owl-nav {
+    /* position: absolute;
+    top: 220px;
+    left: 100px; */
+    margin: -220px auto 0;
+    width: 1140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.owl-nav button span {
+    display: none;
+}
+
+.owl-prev {
+    background-image: url('../../images/prev.svg');
+}
+
+.owl-next {
+    background-image: url('../../images/next.svg');
+}
