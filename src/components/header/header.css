@@ -69,8 +69,18 @@
     border-radius: 10px;
 }
 
+@media screen and (max-width: 1439px) {
+.header__container {
+    width: 940px;
+}
 
+.header__contacts {
+    gap: 24px;
+}
 
+.header__link_phone {
+    margin: 0;
+}
     /* .header__links {
         gap: 27px;
     }
@@ -94,9 +104,9 @@
     .header__link_wa {
         margin-right: 16px;
     } */
+}
 
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 959px) {
     .header__container {
         width: 300px;
         flex-direction: column;
@@ -119,7 +129,7 @@
     }
 
     .header__link_phone {
-        margin-left: 32px;
+        margin-left: 12px;
         margin-right: 0;
     }
 

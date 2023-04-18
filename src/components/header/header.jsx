@@ -18,7 +18,7 @@ function Header({ pageWidth }) {
           </Element>
           <p className="header__description">Организация импорта для промышленных предприятий</p>
         </div>
-        {pageWidth >= 1440 ? (
+        {pageWidth >= 960 ? (
           <div className="header__contacts">
             <a href="tg://resolve?domain=maximum_import" className="header__link header__link_wa">
               <img src={tg} alt="telegram" className="header__image" />
