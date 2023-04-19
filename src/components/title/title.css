@@ -26,7 +26,29 @@
     color: var(--color-blue);
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
+    .title__container {
+        width: 944px;
+        margin: 0 auto;
+    }
+
+    .title__title {
+        margin-top: 30px;
+    }
+
+    .title__sale-text {
+        width: 258px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .title__sale {
+        padding: 0;
+        margin-top: 24px;
+    }
+}
+
+@media screen and (max-width: 959px) {
     .title__container {
         width: 300px;
         margin: 0 auto;
