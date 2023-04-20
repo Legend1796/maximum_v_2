@@ -104,14 +104,12 @@ button:active {
         line-height: 20px;
     }
     
-    h5 {
+    /* h5 {
         font-size: 18px;
         line-height: 21px;
-    }
+    } */
     
 }
-
-
 
 @media screen and (max-width: 959px) {
     h1 {
@@ -127,13 +125,6 @@ button:active {
     h3 {
         font-size: 16px;
         line-height: 20px;
-    }
-    
-    h4 {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 22px;
-        color: var(--color-black);
     }
     
     h5 {

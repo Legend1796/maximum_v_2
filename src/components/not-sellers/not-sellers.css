@@ -53,3 +53,45 @@
     display: flex;
     /* gap: 40px; */
 }
+
+@media screen and (max-width: 1439px) {
+    .not-sellers-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .not-sellers-container {
+        width: 100%;
+    }
+
+    .not-sellers__subtitle {
+        width: 300px;
+        margin-top: 24px;
+        margin-bottom: 64px;
+    }
+
+    .not-sellers__card {
+        margin: 10px;
+        width: 260px;
+        padding: 21px 37px 47px 20px;
+    }
+
+    .not-sellers__card-title {
+        width: 203px;
+        margin-top: 18px;
+    }
+    
+    .not-sellers__card-text {
+        width: 213px;
+    }
+
+    .not-sellers__photo {
+        width: 50px;
+        height: 60px;
+    }
+
+    .not-sellers {
+        margin-top: 80px;
+    }
+}

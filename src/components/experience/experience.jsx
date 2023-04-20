@@ -16,11 +16,15 @@ import pipe from "../../images/grid/13.svg";
 import spare from "../../images/grid/14.svg";
 import Button from "../ui/button";
 
-const Experience = () => {
+const Experience = ({ pageWidth }) => {
   return (
     <section>
       <div className="exp__container">
-        <h2 className="exp__title">Богатый опыт в подборе и поставке металлообабатывающего оборудования</h2>
+        <h2 className="exp__title">
+          {pageWidth > 959
+            ? "Богатый опыт в подборе и поставке металлообабатывающего оборудования"
+            : "Богатый опыт в подборе и поставке металлообабатыв ающего оборудования"}
+        </h2>
         <h5 className="exp__subtitle">У нас есть проверенные поставщики практически по всем направлениям</h5>
         <ul className="exp__grid-container">
           <li className="exp__grid-item">
@@ -37,7 +41,9 @@ const Experience = () => {
           </li>
           <li className="exp__grid-item">
             <img src={cutting} alt="Станки электроэрозионной резки" />
-            <p className="exp__text">Станки электроэрозионной резки</p>
+            <p className="exp__text">
+              {pageWidth > 959 ? "Станки электроэрозионной резки" : "Станки электроэрозион ной резки"}
+            </p>
           </li>
           <li className="exp__grid-item">
             <img src={bending} alt="Роботы для гибочных станков" />
@@ -69,7 +75,9 @@ const Experience = () => {
           </li>
           <li className="exp__grid-item">
             <img src={sand} alt="Песок для гидроабразивной резки" />
-            <p className="exp__text">Песок для гидроабразивной резки</p>
+            <p className="exp__text">
+              {pageWidth > 959 ? "Песок для гидроабразивной резки" : "Песок для гидроабразив ной резки"}
+            </p>
           </li>
           <li className="exp__grid-item">
             <img src={pipe} alt="Трубогибочные станки" />

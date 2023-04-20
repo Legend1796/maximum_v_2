@@ -22,9 +22,9 @@ function Main({ pageWidth }) {
   return (
     <div className="Main">
       <Title />
-      <Promo />
-      <NotSellers />
-      <Experience />
+      <Promo pageWidth={pageWidth} />
+      <NotSellers pageWidth={pageWidth} />
+      <Experience pageWidth={pageWidth} />
       <Economy />
       <Feedback />
       <Manager />

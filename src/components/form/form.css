@@ -136,3 +136,47 @@
     }
     
 }
+
+@media screen and (max-width: 989px) {
+    .form__container {
+        width: 300px;
+        padding: 25px 21px 44px;
+    }
+
+    .react-dadata__input {
+        width: 257px;
+        margin: 0;
+    }
+    
+    .form__textarea {
+        width: 257px;
+    }
+
+    .form__input-phone {
+        width: 257px !important;
+    }
+
+    .form__text_agreement {
+        width: 257px;
+        margin-top: 16px;
+    }
+
+    .input__container {
+        margin: 19px auto 16px;
+        gap: 8px;
+    }
+
+    .form__subtitle {
+        width: 257px;
+    }
+
+    .form__title {
+        width: 257px;
+        margin-bottom: 17px;
+    }
+
+    .form__text {
+        width: 257px;
+    }
+    
+}
