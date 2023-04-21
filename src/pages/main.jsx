@@ -25,7 +25,7 @@ function Main({ pageWidth }) {
       <Promo pageWidth={pageWidth} />
       <NotSellers pageWidth={pageWidth} />
       <Experience pageWidth={pageWidth} />
-      <Economy />
+      <Economy pageWidth={pageWidth} />
       <Feedback />
       <Manager />
       <Seller />
