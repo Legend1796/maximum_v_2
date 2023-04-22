@@ -109,9 +109,17 @@
 }
 
 @media screen and (max-width: 1439px) {
+    .economy {
+        width: 100%;
+    }
+    
     .economy__container {
         width: 940px;
         padding: 92px 0 32px;
+    }
+
+    .economy__bottom {
+        width: 940px;
     }
 
     .economy__image {

@@ -6,7 +6,7 @@ import Button from "../ui/button";
 const Economy = ({ pageWidth }) => {
   return (
     <section className="economy">
-      {pageWidth > 959 ? (
+      {pageWidth > 960 ? (
         <div className="economy__container">
           <div className="economy__column">
             <h2 className="economy__title">10% ОТ СУММЫ КОНТРАКТА</h2>
