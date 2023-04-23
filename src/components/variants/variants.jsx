@@ -8,7 +8,7 @@ const Variants = () => {
         <h2 className="variants__title">ВАРИАНТЫ СОТРУДНИЧЕСТВА</h2>
         <div className="variants__cards">
           <div className="variants__card">
-            <h4 className="variants__card-title">Импорт оборудования на свою организацию</h4>
+            <h4 className="variants__card-title variants__card-title_font">Импорт оборудования на свою организацию</h4>
             <p className="variants__card-text">
               Контракт заключается от вашего лица и вы становитесь полноценным участником ВЭД.
             </p>
@@ -17,7 +17,7 @@ const Variants = () => {
             <h4 className="variants__card-title">15% от стоимости по контракту</h4>
           </div>
           <div className="variants__card">
-            <h4 className="variants__card-title">Покупка оборудования под наш контракт</h4>
+            <h4 className="variants__card-title variants__card-title_font">Покупка оборудования под наш контракт</h4>
             <p className="variants__card-text">
               Берем на себя все обязанности и ответственность по осуществлению импорта на свою компанию
             </p>

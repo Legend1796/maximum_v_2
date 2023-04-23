@@ -28,7 +28,7 @@ function Main({ pageWidth }) {
       <Economy pageWidth={pageWidth} />
       <Feedback />
       <Manager />
-      <Seller />
+      <Seller pageWidth={pageWidth} />
       <Variants />
       <Found />
       <Individual />
