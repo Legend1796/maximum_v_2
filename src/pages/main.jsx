@@ -30,7 +30,7 @@ function Main({ pageWidth }) {
       <Manager />
       <Seller pageWidth={pageWidth} />
       <Variants />
-      <Found />
+      <Found pageWidth={pageWidth} />
       <Individual />
       <Doubts />
       <Footer />

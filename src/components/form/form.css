@@ -137,7 +137,7 @@
     
 }
 
-@media screen and (max-width: 989px) {
+@media screen and (max-width: 1024px) {
     .form__container {
         width: 300px;
         padding: 25px 21px 44px;
