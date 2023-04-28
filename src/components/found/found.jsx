@@ -52,11 +52,7 @@ const Found = ({ pageWidth }) => {
                   list)
                 </p>
               </div>
-              <img
-                src={pageWidth > 959 ? yourselfTablet : yourselfMobile}
-                alt="found__yourself_image"
-                className="found__yourself_image"
-              />
+              <img src={yourselfMobile} alt="found__yourself_image" className="found__yourself_image" />
               <div className="found__absolute">
                 <h6 className="found__absolute-title">Проанализируем рынок и соберем предложения</h6>
                 <p className="found__absolute-text">

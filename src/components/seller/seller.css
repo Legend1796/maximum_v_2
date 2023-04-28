@@ -107,7 +107,7 @@
     .seller__container {
         width: 300px;
         flex-direction: column;
-        gap: 64px;
+        gap: 43px;
     }
 
     .seller__sale_image {
@@ -130,6 +130,8 @@
     .seller__par {
         text-align: left;
         width: 300px;
+        font-size: 14px;
+        line-height: 17px;
     }
 
     .seller__text {
@@ -137,6 +139,6 @@
     }
 
     .seller__par_m {
-        margin-top: 36px;
+        margin-top: 20px;
     }
 }

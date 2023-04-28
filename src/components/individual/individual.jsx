@@ -5,7 +5,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import { data } from "../../utils/individual-data";
 import Item from "./item/item";
 
-const Individual = () => {
+const Individual = ({ pageWidth }) => {
   const options = {
     loop: true,
     center: true,

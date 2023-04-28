@@ -6,7 +6,7 @@
 .doubts__header-title {
     text-align: center;
     margin-top: 25px;
-    margin-bottom: 65px;
+    margin-bottom: 24px;
 }
 
 .doubts__header-subtitle {
@@ -21,6 +21,8 @@
 .doubts__container {
     width: 1160px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .doubts__column {
@@ -47,5 +49,117 @@
 .doubts__column .doubts__absolute-text:nth-child(5) {
     bottom: 50px;
     width: 332px;
-    left: 0x;
+    left: 0;
+}
+
+.doubts-bottom__container {
+    margin: 0 auto;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1439px) {
+    .doubts__container, .doubts__header-subtitle, .doubts-title__header-title {
+        width: 940px;
+    }
+
+    .doubts__container {
+        margin: 0 auto;
+        width: 940px;
+        gap: 20px;
+    }
+    
+
+    .doubts-title__header-title {
+        margin-top: 25px;
+    }
+
+    .doubts__header-title {
+        margin-top: 18px;
+    }
+
+    .doubts__image {
+        position: absolute;
+        width: 382px;
+        height: 344px;
+        left: -2px;
+        top: 256px;
+    }
+
+    .doubts__column .doubts__absolute-text:nth-child(3) {
+        top: 183px;
+        width: 200px;
+        left: -2px;
+    }
+    
+    .doubts__column .doubts__absolute-text:nth-child(4) {
+        top: 123px;
+        width: 205px;
+        right: -59px;
+    }
+    
+    .doubts__column .doubts__absolute-text:nth-child(5) {
+        bottom: 9px;
+        width: 332px;
+        left: -2px;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .doubts {
+        padding: 46px 0 62px;
+    }
+
+    .doubts__container, .doubts__header-subtitle, .doubts-title__header-title {
+        margin: 0 auto;
+        width: 300px;
+    }
+
+    .doubts__container {
+        gap: 36px;
+        flex-direction: column;
+    }
+
+    .doubts__header-subtitle {
+        margin: 30px auto 46px;
+    }
+
+    .doubts__header-title {
+        margin: 0;
+        margin-bottom: 36px;
+    }
+
+    .doubts__absolute-text, .doubts__image {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
+
+    .doubts__image {
+        width: 169px;
+        height: 234px;
+        margin: 36px auto;
+    }
+
+
+    .doubts__column .doubts__absolute-text:nth-child(3) {
+        top: 0;
+        left: 0;
+        width: 300px;
+        margin-top: 20px;
+    }
+    
+    .doubts__column .doubts__absolute-text:nth-child(4) {
+        width: 300px;
+        top: 0;
+        left: 0;
+    }
+    
+    .doubts__column .doubts__absolute-text:nth-child(5) {
+        width: 300px;
+        top: 0;
+        left: 0;
+    }
 }

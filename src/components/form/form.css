@@ -168,6 +168,8 @@
 
     .form__subtitle {
         width: 257px;
+        font-size: 14px;
+        line-height: 17px;
     }
 
     .form__title {

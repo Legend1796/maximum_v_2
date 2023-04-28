@@ -66,3 +66,46 @@
 .owl-next {
     background-image: url('../../images/next.svg');
 }
+
+@media screen and (max-width: 1439px) {
+    .individual__container {
+        width: 940px;
+        margin: 0 auto;
+    }
+
+    .individual__subtitle {
+        margin: 18px auto 76px;
+    }
+
+    .individual__image {
+        width: 305px;
+        height: 504px;
+    }
+
+    .individual__item {
+        margin: 0;
+        padding: 43px 34px; 
+        width: 824px;
+        gap: 20px;
+    }
+
+    .individual__column {
+        width: auto;
+    }
+
+    .individual__col-subtitle {
+        margin-bottom: 16px;
+    }
+    
+    .individual__col-text {
+        width: 377px;
+    }
+
+    .owl-stage, .owl-stage-outer {
+        height: 595px;
+    }
+
+    .owl-dots {
+        margin-bottom: 120px;
+    }
+}
