@@ -1,34 +1,36 @@
 import "./individual.css";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+import React, { Component } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { data } from "../../utils/individual-data";
 import Item from "./item/item";
 
-const Individual = ({ pageWidth }) => {
-  const options = {
-    loop: true,
-    center: true,
-    items: 1,
-    margin: 0,
-    dots: true,
-    nav: true,
-    // navContainer: true,
-  };
-
-  return (
-    <section className="individual">
-      <div className="individual__container">
-        <h2 className="individual__title">Инвивидуальный подход к каждой поставке</h2>
-        <h4 className="individual__subtitle">Примеры доставленного оборудования</h4>
-        <OwlCarousel className="owl-carousel owl-theme" {...options}>
+class Individual extends Component {
+  render() {
+    // const Individual = ({ pageWidth }) => {
+    const settings = {
+      dots: true,
+      //   arrows: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    };
+    return (
+      <section className="individual">
+        <div className="individual__container">
+          <h2 className="individual__title">Инвивидуальный подход к каждой поставке</h2>
+          <h4 className="individual__subtitle">Примеры доставленного оборудования</h4>
+        </div>
+        <Slider {...settings}>
           {data.map((company) => (
             <Item company={company} key={company.id} />
           ))}
-        </OwlCarousel>
-      </div>
-    </section>
-  );
-};
+        </Slider>
+      </section>
+    );
+  }
+}
 
 export default Individual;

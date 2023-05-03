@@ -31,7 +31,7 @@ function Main({ pageWidth }) {
       <Seller pageWidth={pageWidth} />
       <Variants />
       <Found pageWidth={pageWidth} />
-      {/* <Individual pageWidth={pageWidth} /> */}
+      <Individual />
       <Doubts pageWidth={pageWidth} />
       <Footer />
       {/* 
