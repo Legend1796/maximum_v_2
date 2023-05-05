@@ -4,7 +4,7 @@ const Item = ({ company }) => {
   return (
     <div className="individual__item">
       <div className="individual__column">
-        <div className="individual__image"></div>
+        <img src={company.image} alt="фото" className="individual__image" />
       </div>
       <div className="individual__column">
         <h2 className="individual__col-title">{company.title}</h2>

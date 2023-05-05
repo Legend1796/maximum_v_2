@@ -1,3 +1,7 @@
+.individual {
+    margin-bottom: 150px;
+}
+
 .individual__item {
     display: flex;
     border: 1px solid #4C4C4C;
@@ -5,6 +9,7 @@
     padding: 44px 40px 36px 40px; 
     width: 960px;
     margin: 0 auto;
+    margin-bottom: -30px;
 }
 
 .individual__column {
@@ -39,19 +44,24 @@
 }
 
 .individual__image {
-    width: 407px;
-    height: 453px;
+    width: 400px;
+    height: 400px;
     background-color: #D9D9D9;
     border-radius: 20px;
 }
 
-.custom {
+.individual__slider {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* .custom {
     bottom: 45px;
-  }
-  .custom li {
+  } */
+  /* .custom li {
     width: 10px;
-  }
-  .custom li button::before {
+  } */
+  /* .custom li button::before {
     font-size: 12px;
     color: #d9d9d9;
     opacity: 0.8;
@@ -59,7 +69,7 @@
   .custom :global(li.slick-active) button:before {
     opacity: 0.3;
     color: #d9d9d9;
-  }
+  } */
 
 @media screen and (max-width: 1439px) {
     .individual__container {
@@ -72,8 +82,8 @@
     }
 
     .individual__image {
-        width: 305px;
-        height: 504px;
+        width: 350px;
+        height: 350px;
     }
 
     .individual__item {
@@ -90,6 +100,10 @@
     .individual__col-subtitle {
         margin-bottom: 16px;
     }
+
+    .individual__col-title {
+        width: 377px;
+    }
     
     .individual__col-text {
         width: 377px;
@@ -103,3 +117,45 @@
         margin-bottom: 120px;
     }
 }
+
+@media screen and (max-width: 959px) {
+    .individual__container {
+        width: 100%;
+    }
+    
+    .individual__slider {
+        width: 300px;
+    }
+
+    .individual__image {
+        width: 280px;
+        height: 280px;
+    }
+
+    .individual__column {
+        width: 280px;
+    }
+
+    .individual__col-title {
+        width: 280px;
+        text-align: center;
+    }
+
+    .individual__item {
+       flex-direction: column;
+        padding: 9px 10px 27px; 
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .individual__col-title, .individual__col-text{
+        width: 280px;
+        margin: 0;
+    }
+    
+    .slick-slide, .slick-active, .slick-current {
+        width: 300px;
+    }
+
+}
+

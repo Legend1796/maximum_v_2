@@ -11,7 +11,9 @@ class Individual extends Component {
     // const Individual = ({ pageWidth }) => {
     const settings = {
       dots: true,
-      //   arrows: true,
+      //   arrows: false,
+      //   nextArrow: false,
+      //   prevArrow: false,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
@@ -22,12 +24,14 @@ class Individual extends Component {
         <div className="individual__container">
           <h2 className="individual__title">Инвивидуальный подход к каждой поставке</h2>
           <h4 className="individual__subtitle">Примеры доставленного оборудования</h4>
+          <div className="individual__slider">
+            <Slider {...settings}>
+              {data.map((company) => (
+                <Item company={company} key={company.id} />
+              ))}
+            </Slider>
+          </div>
         </div>
-        <Slider {...settings}>
-          {data.map((company) => (
-            <Item company={company} key={company.id} />
-          ))}
-        </Slider>
       </section>
     );
   }

@@ -1,6 +1,15 @@
+import newkom from "../images/cases/newkom.svg";
+import newkomversioncenter from "../images/cases/newkomversioncenter.svg";
+import version from "../images/cases/version.svg";
+import newtech from "../images/cases/newtech.svg";
+import rps from "../images/cases/rps.svg";
+import newkom2 from "../images/cases/newkom2.svg";
+import progress from "../images/cases/progress.svg";
+
 export const data = [
   {
     id: 1,
+    image: newkom,
     title: "Невком",
     firstText: "Вальцы для прокатки листового металла",
     secondText:
@@ -10,6 +19,7 @@ export const data = [
   },
   {
     id: 2,
+    image: newtech,
     title: "Невский Технолог",
     firstText: "Вальцы для прокатки листового металла",
     secondText:
@@ -19,6 +29,7 @@ export const data = [
   },
   {
     id: 3,
+    image: version,
     title: "Версия-центр",
     firstText: "Станок лазерной резки Металла и источником Raycus 1,5KВт",
     secondText:
@@ -27,6 +38,7 @@ export const data = [
   },
   {
     id: 4,
+    image: rps,
     title: "РПС",
     firstText: "Токарный станок с ЧПУ",
     secondText: "",
@@ -35,6 +47,7 @@ export const data = [
   },
   {
     id: 5,
+    image: newkom2,
     title: "НевКом",
     firstText: "Станок электроэрозионный проволочно вырезной",
     secondText:
@@ -44,6 +57,7 @@ export const data = [
   },
   {
     id: 6,
+    image: progress,
     title: "Стройпрогресс",
     firstText: "Линия по производству легковркучивающихся свай.",
     secondText:
@@ -53,6 +67,7 @@ export const data = [
   },
   {
     id: 7,
+    image: newkomversioncenter,
     title: "Невком, Версия-центр.",
     firstText: "Гибочный пресс",
     secondText:
