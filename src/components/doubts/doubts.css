@@ -59,6 +59,10 @@
     justify-content: center;
 }
 
+.doubts__image {
+    margin-top: 50px;
+}
+
 @media screen and (max-width: 1439px) {
     .doubts__container, .doubts__header-subtitle, .doubts-title__header-title {
         width: 940px;
@@ -80,6 +84,7 @@
     }
 
     .doubts__image {
+        margin: 0;
         position: absolute;
         width: 382px;
         height: 344px;
@@ -107,6 +112,13 @@
 }
 
 @media screen and (max-width: 959px) {
+    .doubts__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .doubts {
         padding: 46px 0 62px;
     }
