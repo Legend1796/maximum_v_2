@@ -3,7 +3,7 @@ import "./economy.css";
 import economy from "../../images/largeImages/economy_image.svg";
 import Button from "../ui/button";
 
-const Economy = ({ pageWidth }) => {
+const Economy = ({ pageWidth, isOpen }) => {
   return (
     <section className="economy">
       {pageWidth > 960 ? (
@@ -24,7 +24,7 @@ const Economy = ({ pageWidth }) => {
                 <h4 className="economy__table-usd">8 955 USD</h4>
               </div>
             </div>
-            <button className="economy__button" type="button">
+            <button className="economy__button" type="button" onClick={isOpen}>
               <p className="economy__button-text">Детализация</p>
             </button>
           </div>

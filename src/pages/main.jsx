@@ -1,9 +1,4 @@
-// import About from "../../src/components/about/about";
-// import Form from "../../src/components/form/form";
-// import Promo from "../../src/components/promo/promo";
-// import Steps from "../../src/components/steps/steps";
-// import Why from "../../src/components/whyus/why";
-
+import { useState } from "react";
 import Doubts from "../components/doubts/doubts";
 import Economy from "../components/economy/economy";
 import Experience from "../components/experience/experience";
@@ -13,19 +8,29 @@ import Found from "../components/found/found";
 import Individual from "../components/individual/individual";
 import Manager from "../components/manager/manager";
 import NotSellers from "../components/not-sellers/not-sellers";
+import Popup from "../components/popup/popup";
 import Promo from "../components/promo/promo";
 import Seller from "../components/seller/seller";
 import Title from "../components/title/title";
 import Variants from "../components/variants/variants";
 
 function Main({ pageWidth }) {
+  const [popupOpen, setPopupOpen] = useState(false);
+
+  const handleOpen = () => {
+    setPopupOpen(true);
+  };
+  const handleClose = () => {
+    setPopupOpen(false);
+  };
+
   return (
     <div className="Main">
       <Title />
       <Promo pageWidth={pageWidth} />
       <NotSellers pageWidth={pageWidth} />
       <Experience pageWidth={pageWidth} />
-      <Economy pageWidth={pageWidth} />
+      <Economy pageWidth={pageWidth} isOpen={handleOpen} />
       <Feedback />
       <Manager />
       <Seller pageWidth={pageWidth} />
@@ -34,6 +39,7 @@ function Main({ pageWidth }) {
       <Individual />
       <Doubts pageWidth={pageWidth} />
       <Footer />
+      <Popup isOpen={popupOpen} onClose={handleClose} />
       {/* 
       <Form pageWidth={pageWidth} /> */}
     </div>
