@@ -38,7 +38,6 @@ function Main({ pageWidth }) {
       <Found pageWidth={pageWidth} />
       <Individual />
       <Doubts pageWidth={pageWidth} />
-      <Footer />
       <Popup isOpen={popupOpen} onClose={handleClose} />
       {/* 
       <Form pageWidth={pageWidth} /> */}

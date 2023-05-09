@@ -3,6 +3,10 @@ import Main from "../../pages/main";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Header from "../header/header";
+import NotFound from "../../pages/notFound";
+import PersonalData from "../../pages/personal-data";
+import ScrollToTop from "../scroll-to-top/scroll-to-top";
+import Footer from "../footer/footer";
 
 function App() {
   const [pageWidth, setPageWidth] = useState(document.documentElement.scrollWidth);
@@ -21,19 +25,19 @@ function App() {
   return (
     <div className="App">
       <Header pageWidth={pageWidth} />
-      {/* <ScrollToTop height={0} /> */}
+      <ScrollToTop height={0} />
       <Routes>
         <Route exact path="/" element={<Main pageWidth={pageWidth} />} />
         {/* <Route exact path="/send" element={<Send />} /> */}
         {/* <Route exact path="/policy" element={<Policy />} /> */}
-        {/* <Route exact path="/personal-data" element={<PersonalData />} /> */}
+        <Route exact path="/personal-data" element={<PersonalData />} />
         {/* <Route
           path={!location === "/notfound" || "/denied" || "/sucsess"}
           element={<Navigate replace exact path="/" />}
         /> */}
-        {/* <Route path="*" element={<NotFound />}></Route> */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
-      {/* <Footer pageWidth={pageWidth} /> */}
+      <Footer pageWidth={pageWidth} />
       {/* <Copyright /> */}
     </div>
   );
