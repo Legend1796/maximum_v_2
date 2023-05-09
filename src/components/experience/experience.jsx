@@ -15,6 +15,7 @@ import sand from "../../images/grid/12.svg";
 import pipe from "../../images/grid/13.svg";
 import spare from "../../images/grid/14.svg";
 import Button from "../ui/button";
+import { Link } from "react-scroll";
 
 const Experience = ({ pageWidth }) => {
   return (
@@ -90,9 +91,11 @@ const Experience = ({ pageWidth }) => {
         </ul>
         <h4 className="exp__bottom-title">Мне нужно металлообрабатывающее оборудование</h4>
         <div className="bottom__container">
-          <Button type="button" typeButton="primary">
-            <p>Оставить заявку</p>
-          </Button>
+          <Link className="promo__button" to="form-seller" spy={true} smooth={true} offset={-120} duration={1400}>
+            <Button type="button" typeButton="primary">
+              <p>Оставить заявку</p>
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

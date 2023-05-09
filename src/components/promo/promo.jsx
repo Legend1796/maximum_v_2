@@ -8,7 +8,7 @@ import promoImageMobile from "../../images/largeImages/promoImageMobile.svg";
 const Promo = ({ pageWidth }) => {
   return (
     <section>
-      <div className="promo__container">
+      <div className="promo__container" id="form-promo">
         <Form />
         {pageWidth < 990 ? (
           <div className="promo__image-and-text">

@@ -33,7 +33,7 @@ const Seller = ({ pageWidth }) => {
             </>
           )}
         </div>
-        <div className="seller__column">
+        <div className="seller__column" id="form-seller">
           <Form />
         </div>
       </div>

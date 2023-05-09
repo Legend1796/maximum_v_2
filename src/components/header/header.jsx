@@ -3,7 +3,7 @@ import logo from "../../images/logo.svg";
 import tg from "../../images/icons/tg.svg";
 import wa from "../../images/icons/wa.svg";
 import { NavLink } from "react-router-dom";
-import { Element } from "react-scroll";
+import { Element, Link } from "react-scroll";
 import Button from "../ui/button";
 
 function Header({ pageWidth }) {
@@ -29,9 +29,11 @@ function Header({ pageWidth }) {
             <a href="tel:+7 812 200 46 43" className="header__link header__link_phone">
               +7 (812) 200 46 43
             </a>
-            <Button type="button" typeButton="primary">
-              <p>Перезвоните мне</p>
-            </Button>
+            <Link className="promo__button" to="form-promo" spy={true} smooth={true} offset={-120} duration={400}>
+              <Button type="button" typeButton="primary">
+                <p>Перезвоните мне</p>
+              </Button>
+            </Link>
           </div>
         ) : (
           <>

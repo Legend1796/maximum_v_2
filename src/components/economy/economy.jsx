@@ -2,6 +2,7 @@ import React from "react";
 import "./economy.css";
 import economy from "../../images/largeImages/economy_image.svg";
 import Button from "../ui/button";
+import { Link } from "react-scroll";
 
 const Economy = ({ pageWidth, isOpen }) => {
   return (
@@ -65,9 +66,11 @@ const Economy = ({ pageWidth, isOpen }) => {
           У вас появится понимание, сколько оборудование или материалы стоят на зарубежном рынке, а так же точные
           расходы на импорт. Вы даже сможете прикинуть, сколько наценивают местные компании из РФ.{" "}
         </h5>
-        <Button type="button" typeButton="primary">
-          Начать сотрудничество
-        </Button>
+        <Link className="promo__button" to="form-seller" spy={true} smooth={true} offset={-120} duration={1400}>
+          <Button type="button" typeButton="primary">
+            Начать сотрудничество
+          </Button>
+        </Link>
       </div>
     </section>
   );

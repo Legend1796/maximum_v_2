@@ -3,6 +3,7 @@ import Button from "../ui/button";
 import Form from "../form/form";
 import doubts from "../../images/largeImages/question_image.svg";
 import doubtsMobile from "../../images/largeImages/question_image_mobile.svg";
+import { Link } from "react-scroll";
 
 const Doubts = ({ pageWidth }) => {
   return (
@@ -14,12 +15,14 @@ const Doubts = ({ pageWidth }) => {
           поставщиком или производителем
         </h5>
         <div className="doubts-bottom__container">
-          <Button type="button" typeButton="primary">
-            <p>Оставить заявку</p>
-          </Button>
+          <Link className="promo__button" to="form-doubts" spy={true} smooth={true} offset={20} duration={400}>
+            <Button type="button" typeButton="primary">
+              <p>Оставить заявку</p>
+            </Button>
+          </Link>
         </div>
       </section>
-      <section className="doubts">
+      <section className="doubts" id="form-doubts">
         <div className="doubts__container">
           <div className="doubts__column">
             <h2 className="doubts__header-title">ОСТАЛИСЬ СОМНЕНИЯ?</h2>
@@ -51,7 +54,7 @@ const Doubts = ({ pageWidth }) => {
               </>
             )}
           </div>
-          <div className="doubts__column">
+          <div className="doubts__column" id="form-doubts">
             <Form />
           </div>
         </div>

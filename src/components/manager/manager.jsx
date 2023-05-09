@@ -3,6 +3,7 @@ import "./manager.css";
 import manager from "../../images/photo_1.png";
 import list from "../../images/icons/list.svg";
 import Button from "../ui/button";
+import { Link } from "react-scroll";
 
 const Manager = () => {
   return (
@@ -113,9 +114,11 @@ const Manager = () => {
           </ul>
         </div>
         <div className="manager__button-container">
-          <Button type="button" typeButton="primary">
-            <p className="manager__button-text">Оставить заявку</p>
-          </Button>
+          <Link className="promo__button" to="form-seller" spy={true} smooth={true} offset={-120} duration={400}>
+            <Button type="button" typeButton="primary">
+              <p className="manager__button-text">Оставить заявку</p>
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
