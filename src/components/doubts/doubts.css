@@ -47,7 +47,7 @@
 }
 
 .doubts__column .doubts__absolute-text:nth-child(5) {
-    bottom: 50px;
+    bottom: 40px;
     width: 332px;
     left: 0;
 }
@@ -60,7 +60,7 @@
 }
 
 .doubts__image {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 @media screen and (max-width: 1439px) {
