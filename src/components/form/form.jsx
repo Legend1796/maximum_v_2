@@ -1,11 +1,11 @@
-import React from "react";
-import "react-phone-input-2/lib/style.css";
-import "./form.css";
-import { useEffect, useState } from "react";
 import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+import "react-dadata/dist/react-dadata.css";
+import { useEffect, useState } from "react";
 import { FioSuggestions, EmailSuggestions } from "react-dadata";
 import { Link } from "react-router-dom";
 import Button from "../ui/button";
+import "./form.css";
 import delFile from "../../images/delFile.svg";
 
 const Form = () => {

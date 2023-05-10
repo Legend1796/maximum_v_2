@@ -20,6 +20,15 @@
     outline: none;
 }
 
+.form__input {
+    position: relative;
+}
+
+.react-dadata__suggestions {
+    position: absolute;
+    top: 40px;
+}
+
 .form__input-phone {
     padding-left: 18px !important;
     width: 360px !important;
@@ -87,6 +96,7 @@
 }
 
 .form__textarea {
+    max-width: 325px;
     color: #232323;
     border: 1px solid var(--color-underline);
     border-radius: 10px;
