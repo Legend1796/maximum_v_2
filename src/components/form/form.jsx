@@ -6,18 +6,20 @@ import PhoneInput from "react-phone-input-2";
 import { FioSuggestions, EmailSuggestions } from "react-dadata";
 import { Link } from "react-router-dom";
 import Button from "../ui/button";
+import delFile from "../../images/delFile.svg";
 
 const Form = () => {
   const [isValid, setIsValid] = useState(false);
   const [email, setEmail] = useState();
   const [name, setName] = useState();
   const [phone, setPhone] = useState("");
-  const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedFile, setSelectedFile] = useState();
   const [checked, setChecked] = useState(true);
 
   function handleChangeFiles(e) {
     console.log(e.target.files);
-    setSelectedFile(e.target.files.length);
+    setSelectedFile(e.target.files);
+    console.log(selectedFile);
   }
 
   useEffect(() => {
@@ -84,6 +86,14 @@ const Form = () => {
           <textarea className="form__textarea" name="textarea" id="textarea" cols="30" rows="5"></textarea>
         </div>
         <p className="form__text">Техническое задание, Invoice, Packing list если есть</p>
+        <div className="form__added">
+          {/* {selectedFile?.map((file) => { */}
+          {/* // <div className="form__selected"> */}
+          {/* <p className="form__added-text">{file}</p> */}
+          {/* <img src={delFile} alt="delete file" /> */}
+          {/* </div> */}
+          {/* })} */}
+        </div>
         <button className="button__file" type="button">
           <input
             className="form__add-file-input"

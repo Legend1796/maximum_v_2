@@ -1,4 +1,5 @@
 import wa from "../../images/icons/wa.svg";
+import Map from "../map/map";
 import "./footer.css";
 
 const Footer = () => {
@@ -19,7 +20,9 @@ const Footer = () => {
             <p className="footer__text">ООО “Максимум” ИНН 7811751233 ОГРН 1207800123200</p>
           </div>
           <div className="footer__column">
-            <div className="footer__block"></div>
+            <div className="footer__block">
+              <Map />
+            </div>
           </div>
         </div>
       </div>
