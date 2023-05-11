@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./button.css";
 
-const Button = ({ children, typeButton }) => {
+const Button = ({ children, typeButton, isDisabled }) => {
   const [buttonType, setButtonType] = useState("button_primary");
 
   useEffect(() => {
@@ -17,7 +17,9 @@ const Button = ({ children, typeButton }) => {
     }
   }, [typeButton]);
 
-  return <button className={`button ${buttonType}`}>{children}</button>;
+  return (
+    <button className={isDisabled ? `button button_disabled ${buttonType}` : `button ${buttonType}`}>{children}</button>
+  );
 };
 
 export default Button;

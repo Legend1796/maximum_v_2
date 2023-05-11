@@ -13,13 +13,27 @@ const Form = () => {
   const [email, setEmail] = useState();
   const [name, setName] = useState();
   const [phone, setPhone] = useState("");
-  const [selectedFile, setSelectedFile] = useState();
   const [checked, setChecked] = useState(true);
+  const [files, setFiles] = useState([]);
+  let addedFiles = [];
+  let id = 0;
 
   function handleChangeFiles(e) {
-    console.log(e.target.files);
-    setSelectedFile(e.target.files);
-    console.log(selectedFile);
+    if (!e.target.files.length) {
+      return;
+    }
+
+    const arr = Array.from(e.target.files);
+
+    for (let i = 0; i < arr.length; i++) {
+      arr[i]._id = id;
+      if (id > 99) {
+        id = 0;
+      } else id++;
+      addedFiles.push(arr[i]);
+      console.log("handleChangeFiles: ", addedFiles);
+    }
+    setFiles(addedFiles);
   }
 
   useEffect(() => {
@@ -27,6 +41,10 @@ const Form = () => {
       setIsValid(email.value && phone.length > 10 && name.value && checked);
     }
   }, [name, email, phone, checked]);
+
+  const handleDeleteFile = (file) => {
+    setFiles(files.filter((data) => data._id !== file._id));
+  };
 
   return (
     <form>
@@ -87,12 +105,16 @@ const Form = () => {
         </div>
         <p className="form__text">Техническое задание, Invoice, Packing list если есть</p>
         <div className="form__added">
-          {/* {selectedFile?.map((file) => { */}
-          {/* // <div className="form__selected"> */}
-          {/* <p className="form__added-text">{file}</p> */}
-          {/* <img src={delFile} alt="delete file" /> */}
-          {/* </div> */}
-          {/* })} */}
+          {files.map((file) => {
+            return (
+              <div className="form__selected" key={file._id}>
+                <p className="form__added-text">{file.name}</p>
+                <button className="form__delete-file" type="button" onClick={() => handleDeleteFile(file)}>
+                  <img src={delFile} alt="delete file" />
+                </button>
+              </div>
+            );
+          })}
         </div>
         <button className="button__file" type="button">
           <input
@@ -104,7 +126,7 @@ const Form = () => {
           />
           <p>Загрузить файл</p>
         </button>
-        <Button type="button" typeButton="primary">
+        <Button type="submit" typeButton="primary" disabled={!isValid} isDisabled={!isValid}>
           <p>Оставить заявку</p>
         </Button>
         <div className=" form__text form__text_agreement">

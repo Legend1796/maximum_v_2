@@ -147,7 +147,20 @@
 
 .form__added {
     width: 100%;
+    margin: 17px auto 23px;
 }
+
+.form__delete-file {
+    margin-left: 10px;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.form__delete-file:hover {
+    background: none;
+} 
 
 @media screen and (max-width: 1439px) {
     .form__container {

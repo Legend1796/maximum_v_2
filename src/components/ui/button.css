@@ -19,6 +19,10 @@
     background-color: var(--color-yellow);
 }
 
+.button_disabled {
+    background-color: #cdcdcd;
+}
+
 .button_file {
     margin-top: 19px;
     margin-bottom: 22px;
