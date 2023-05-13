@@ -2,6 +2,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "react-dadata/dist/react-dadata.css";
 import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 import { FioSuggestions, EmailSuggestions } from "react-dadata";
 import { Link } from "react-router-dom";
 import Button from "../ui/button";
@@ -9,14 +10,22 @@ import "./form.css";
 import delFile from "../../images/delFile.svg";
 
 const Form = () => {
-  const [isValid, setIsValid] = useState(false);
+  const [isValidForm, setIsValidForm] = useState(false);
   const [email, setEmail] = useState();
   const [name, setName] = useState();
   const [phone, setPhone] = useState("");
+  const [comment, setComment] = useState("");
   const [checked, setChecked] = useState(true);
   const [files, setFiles] = useState([]);
   let addedFiles = [];
   let id = 0;
+
+  //   const {
+  //     register,
+  //     handleSubmit,
+  //     formState: { isValid },
+  //     clearErrors,
+  //   } = useForm({ mode: "onChange" });
 
   function handleChangeFiles(e) {
     if (!e.target.files.length) {
@@ -38,7 +47,7 @@ const Form = () => {
 
   useEffect(() => {
     if (email && name) {
-      setIsValid(email.value && phone.length > 10 && name.value && checked);
+      setIsValidForm(email.value && phone.length > 10 && name.value && checked);
     }
   }, [name, email, phone, checked]);
 
@@ -48,15 +57,33 @@ const Form = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    let formData = new FormData();
+    const formData = new FormData();
     formData.append("name", name.value);
     formData.append("email", email.value);
     formData.append("phone", phone);
-    console.log(formData);
+    formData.append("files: ", files);
+    // Проверка, что все данные готовы к отправке
+    for (const value of formData.values()) {
+      console.log(value);
+    }
   }
 
+  //   const onSubmit = (data) => {
+  //     const submitData = { id: id, body: data };
+  //     console.log(submitData);
+  // sendObjectForm(submitData)
+  //     .unwrap()
+  //     .then(() => {
+  //         setOrderSent(true);
+  //         setSuccess(true);
+  //     })
+  //     .catch((e) => {
+  //         serverValidation(e.data, setError);
+  //     });
+  //   };
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} id="form">
       <div className="form__container">
         <h4 className="form__title">Подберем максимальное количество предложений по интересующей Вас продукции</h4>
         <div className="form__subtitle">Перезвоним в течение 15 минут, чтобы уточнить детали. Заполните форму</div>
@@ -94,6 +121,12 @@ const Form = () => {
             country={"ru"}
             value={phone}
             onChange={setPhone}
+            isValid={(value) => {
+              if (!value) {
+                return `Invalid value`;
+              }
+              return true;
+            }}
           />
           <EmailSuggestions
             selectOnBlur="true"
@@ -110,7 +143,13 @@ const Form = () => {
               autoFocus: true,
             }}
           />
-          <textarea className="form__textarea" name="textarea" id="textarea" cols="30" rows="5"></textarea>
+          <textarea
+            className="form__textarea"
+            name="textarea"
+            id="textarea"
+            cols="30"
+            rows="5"
+            onChange={(e) => setComment(e.target.value)}></textarea>
         </div>
         <p className="form__text">Техническое задание, Invoice, Packing list если есть</p>
         <div className="form__added">
@@ -135,7 +174,7 @@ const Form = () => {
           />
           <p>Загрузить файл</p>
         </button>
-        <Button type="submit" typeButton="primary" disabled={!isValid} isDisabled={!isValid}>
+        <Button type="submit" typeButton="primary" disabled={!isValidForm}>
           <p>Оставить заявку</p>
         </Button>
         <div className=" form__text form__text_agreement">

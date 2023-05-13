@@ -3,4 +3,4 @@ services:
   nginx-front:
     image: nginx:1.17.8
     volumes:
-    - ./
+    - ./code-front:/code
