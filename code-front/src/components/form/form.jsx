@@ -46,8 +46,17 @@ const Form = () => {
     setFiles(files.filter((data) => data._id !== file._id));
   };
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    let formData = new FormData();
+    formData.append("name", name.value);
+    formData.append("email", email.value);
+    formData.append("phone", phone);
+    console.log(formData);
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="form__container">
         <h4 className="form__title">Подберем максимальное количество предложений по интересующей Вас продукции</h4>
         <div className="form__subtitle">Перезвоним в течение 15 минут, чтобы уточнить детали. Заполните форму</div>
