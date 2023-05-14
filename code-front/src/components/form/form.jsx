@@ -56,6 +56,7 @@ const Form = () => {
     formData.append("email", email.value);
     formData.append("phone", phone);
     formData.append("files: ", files);
+    formData.append("comment: ", comment);
     // Проверка, что все данные готовы к отправке
     for (const value of formData.values()) {
       console.log(value);
@@ -72,29 +73,6 @@ const Form = () => {
         console.log(error);
       });
   }
-
-  // fetch(
-  //   "https://maximum-logistics.ru/api/v1/orders/",
-  //   {
-  //     method: "POST",
-  //     body: formData,
-  //     headers: {
-  //       "Content-Type": "multipart/form-data",
-  //     },
-  //   }
-  //   //   { mode: "no-cors" }
-  // ).then((response) => {
-  //   response
-  //     .json()
-  //     .then((data) => {
-  //       console.log("Successful" + data);
-  //     })
-  //     .catch((error) => {
-  //       navigate("/send");
-  //       console.log(error);
-  //     });
-  // });
-  //   }
 
   return (
     <form onSubmit={handleSubmit} id="form">
