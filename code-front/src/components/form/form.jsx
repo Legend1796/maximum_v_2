@@ -2,14 +2,15 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "react-dadata/dist/react-dadata.css";
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 import { FioSuggestions, EmailSuggestions } from "react-dadata";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../ui/button";
-import "./form.css";
+import axios from "axios";
 import delFile from "../../images/delFile.svg";
+import "./form.css";
 
 const Form = () => {
+  const navigate = useNavigate();
   const [isValidForm, setIsValidForm] = useState(false);
   const [email, setEmail] = useState();
   const [name, setName] = useState();
@@ -19,13 +20,6 @@ const Form = () => {
   const [files, setFiles] = useState([]);
   let addedFiles = [];
   let id = 0;
-
-  //   const {
-  //     register,
-  //     handleSubmit,
-  //     formState: { isValid },
-  //     clearErrors,
-  //   } = useForm({ mode: "onChange" });
 
   function handleChangeFiles(e) {
     if (!e.target.files.length) {
@@ -66,21 +60,41 @@ const Form = () => {
     for (const value of formData.values()) {
       console.log(value);
     }
+
+    axios
+      .post("https://maximum-logistics.ru/api/v1/orders/", { formData })
+      .then((res) => {
+        console.log(res);
+        console.log(res.data);
+      })
+      .catch((error) => {
+        navigate("/send");
+        console.log(error);
+      });
   }
 
-  //   const onSubmit = (data) => {
-  //     const submitData = { id: id, body: data };
-  //     console.log(submitData);
-  // sendObjectForm(submitData)
-  //     .unwrap()
-  //     .then(() => {
-  //         setOrderSent(true);
-  //         setSuccess(true);
+  // fetch(
+  //   "https://maximum-logistics.ru/api/v1/orders/",
+  //   {
+  //     method: "POST",
+  //     body: formData,
+  //     headers: {
+  //       "Content-Type": "multipart/form-data",
+  //     },
+  //   }
+  //   //   { mode: "no-cors" }
+  // ).then((response) => {
+  //   response
+  //     .json()
+  //     .then((data) => {
+  //       console.log("Successful" + data);
   //     })
-  //     .catch((e) => {
-  //         serverValidation(e.data, setError);
+  //     .catch((error) => {
+  //       navigate("/send");
+  //       console.log(error);
   //     });
-  //   };
+  // });
+  //   }
 
   return (
     <form onSubmit={handleSubmit} id="form">
