@@ -1,14 +1,35 @@
 import React from "react";
 import "./popup.css";
 import closePopup from "../../images/closePopup.svg";
+import { useEffect } from "react";
 
 const Popup = ({ onClose, isOpen }) => {
+  useEffect(() => {
+    if (!isOpen) return;
+    const closeByEscape = (e) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", closeByEscape);
+
+    return () => document.removeEventListener("keydown", closeByEscape);
+  }, [isOpen, onClose]);
+
+  const handleOverlay = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
+  const handleClose = () => {
+    onClose();
+  };
+
   return (
     <div className={isOpen ? "popup popup_opened" : "popup"}>
-      <button onClick={onClose} className="popup__overlay" />
+      <button onClick={handleOverlay} className="popup__overlay" />
       <div className="popup__container">
         <h5 className="popup__title">Стоимость по контракту 5900 USD</h5>
-        <button onClick={onClose} className="popup__close" type="button">
+        <button onClick={handleClose} className="popup__close" type="button">
           <img src={closePopup} alt="closePopup" />
         </button>
         <table className="popup__table">

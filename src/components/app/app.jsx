@@ -31,14 +31,10 @@ function App() {
         <Route exact path="/" element={<Main pageWidth={pageWidth} />} />
         <Route exact path="/send" element={<Send />} />
         <Route exact path="/personal-data" element={<PersonalData />} />
-        {/* <Route
-          path={!location === "/notfound" || "/denied" || "/sucsess"}
-          element={<Navigate replace exact path="/" />}
-        /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
+
       <Footer pageWidth={pageWidth} />
-      {/* <Copyright /> */}
     </div>
   );
 }
