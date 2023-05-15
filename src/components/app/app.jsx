@@ -8,10 +8,10 @@ import Send from "../../pages/send";
 import PersonalData from "../../pages/personal-data";
 import ScrollToTop from "../scroll-to-top/scroll-to-top";
 import Footer from "../footer/footer";
+import Success from "../../pages/success";
 
 function App() {
   const [pageWidth, setPageWidth] = useState(document.documentElement.scrollWidth);
-  //   const location = useLocation();
   window.onresize = newPageSize;
 
   function newPageSize() {
@@ -30,10 +30,10 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Main pageWidth={pageWidth} />} />
         <Route exact path="/send" element={<Send />} />
+        <Route exact path="/success" element={<Success />} />
         <Route exact path="/personal-data" element={<PersonalData />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-
       <Footer pageWidth={pageWidth} />
     </div>
   );

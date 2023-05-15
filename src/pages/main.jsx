@@ -3,7 +3,6 @@ import Doubts from "../components/doubts/doubts";
 import Economy from "../components/economy/economy";
 import Experience from "../components/experience/experience";
 import Feedback from "../components/feedback/feedback";
-import Footer from "../components/footer/footer";
 import Found from "../components/found/found";
 import Individual from "../components/individual/individual";
 import Manager from "../components/manager/manager";
@@ -39,8 +38,6 @@ function Main({ pageWidth }) {
       <Individual />
       <Doubts pageWidth={pageWidth} />
       <Popup isOpen={popupOpen} onClose={handleClose} />
-      {/* 
-      <Form pageWidth={pageWidth} /> */}
     </div>
   );
 }

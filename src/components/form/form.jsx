@@ -61,11 +61,10 @@ const Form = () => {
     for (const value of formData.values()) {
       console.log(value);
     }
-
     axios
       .post("https://maximum-logistics.ru/api/v1/orders/", { formData })
       .then((res) => {
-        console.log(res);
+        navigate("/success");
         console.log(res.data);
       })
       .catch((error) => {
