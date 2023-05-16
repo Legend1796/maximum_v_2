@@ -55,8 +55,9 @@ const Form = () => {
     formData.append("name", name.value);
     formData.append("email", email.value);
     formData.append("phone", phone);
-    formData.append("files: ", files);
-    formData.append("comment: ", comment);
+    formData.append("host", "maximum-logistic.ru");
+    formData.append("files", files);
+    formData.append("comment", comment);
     for (const value of formData.values()) {
       console.log(value);
     }
