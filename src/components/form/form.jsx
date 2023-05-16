@@ -49,7 +49,7 @@ const Form = () => {
     setFiles(files.filter((data) => data._id !== file._id));
   };
 
-  function handleSubmit(e) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append("name", name.value);
@@ -57,21 +57,33 @@ const Form = () => {
     formData.append("phone", phone);
     formData.append("files: ", files);
     formData.append("comment: ", comment);
-    // Проверка, что все данные готовы к отправке
     for (const value of formData.values()) {
       console.log(value);
     }
-    axios
-      .post("https://maximum-logistics.ru/api/v1/orders/", { formData })
-      .then((res) => {
-        navigate("/success");
-        console.log(res.data);
-      })
-      .catch((error) => {
-        navigate("/send");
-        console.log(error);
+    // axios
+    //   .post("https://maximum-logistics.ru/api/v1/orders/", { formData })
+    //   .then((res) => {
+    //     navigate("/success");
+    //     console.log(res.data);
+    //   })
+    //   .catch((error) => {
+    //     navigate("/send");
+    //     console.log(error);
+    //   });
+
+    try {
+      const res = await axios.post("https://maximum-logistics.ru/api/v1/orders/", formData, {
+        headers: {
+          "Content-type": "multipart/form-data",
+        },
       });
-  }
+      navigate("/success");
+      console.log(res.data);
+    } catch (error) {
+      navigate("/send");
+      console.error(error);
+    }
+  };
 
   return (
     <form onSubmit={handleSubmit} id="form">
