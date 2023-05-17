@@ -24,8 +24,6 @@
 }
 
 .button_file {
-    margin-top: 19px;
-    margin-bottom: 22px;
-    color: #FFFFFF;
-    background-color: var(--color-black);
+    align-self: flex-start;
+    background-color: var(--color-yellow);
 }

@@ -58,20 +58,6 @@ const Form = () => {
     formData.append("host", "maximum-logistic.ru");
     formData.append("files", files);
     formData.append("comment", comment);
-    for (const value of formData.values()) {
-      console.log(value);
-    }
-    // axios
-    //   .post("https://maximum-logistics.ru/api/v1/orders/", { formData })
-    //   .then((res) => {
-    //     navigate("/success");
-    //     console.log(res.data);
-    //   })
-    //   .catch((error) => {
-    //     navigate("/send");
-    //     console.log(error);
-    //   });
-
     try {
       const res = await axios.post("https://maximum-logistics.ru/api/v1/orders/", formData, {
         headers: {
@@ -176,10 +162,10 @@ const Form = () => {
             onChange={handleChangeFiles}
             accept="image/*, .pdf, .xlsx, .xls, .png, .jpg, .doc, .docx"
           />
-          <p>Загрузить файл</p>
+          <p className="form__button-text">Загрузить файл</p>
         </button>
-        <Button type="submit" typeButton="primary" disabled={!isValidForm}>
-          <p>Оставить заявку</p>
+        <Button type="submit" typeButton="file" disabled={!isValidForm}>
+          <p className="form__button-text">Оставить заявку</p>
         </Button>
         <div className=" form__text form__text_agreement">
           Нажимая кнопку “Оставить заявку” вы соглашаетесь с&nbsp;
