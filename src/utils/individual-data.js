@@ -1,10 +1,10 @@
-import newkom from "../images/cases/newkom.svg";
-import newkomversioncenter from "../images/cases/newkomversioncenter.svg";
-import version from "../images/cases/version.svg";
-import newtech from "../images/cases/newtech.svg";
-import rps from "../images/cases/rps.svg";
-import newkom2 from "../images/cases/newkom2.svg";
-import progress from "../images/cases/progress.svg";
+import newkom from "../images/cases/newkom.png";
+import newkomversioncenter from "../images/cases/newkomversioncenter.png";
+import version from "../images/cases/version.png";
+import newtech from "../images/cases/newtech.png";
+import rps from "../images/cases/rps.png";
+import newkom2 from "../images/cases/newkom2.png";
+import progress from "../images/cases/progress.png";
 
 export const data = [
   {
