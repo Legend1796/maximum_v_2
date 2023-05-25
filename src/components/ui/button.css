@@ -22,8 +22,3 @@
 .button_disabled {
     background-color: #cdcdcd;
 }
-
-.button_file {
-    align-self: flex-start;
-    background-color: var(--color-yellow);
-}

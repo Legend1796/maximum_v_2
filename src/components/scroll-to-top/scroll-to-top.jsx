@@ -6,10 +6,17 @@ function ScrollToTop({ height }) {
 
   useEffect(() => {
     window.scrollTo({
-      top: height,
+      top: 0,
       left: 0,
     });
   }, [pathname]);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+  }, []);
 
   return null;
 }

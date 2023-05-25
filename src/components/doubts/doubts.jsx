@@ -1,11 +1,13 @@
-import "./doubts.css";
+import { useSelector } from "react-redux";
+import { Link } from "react-scroll";
 import Button from "../ui/button";
 import Form from "../form/form";
 import doubts from "../../images/largeImages/question_image.svg";
 import doubtsMobile from "../../images/largeImages/question_image_mobile.svg";
-import { Link } from "react-scroll";
+import "./doubts.css";
 
-const Doubts = ({ pageWidth }) => {
+const Doubts = ({ setIsLoading }) => {
+  const pageWidth = useSelector((state) => state.width.pageWidth);
   return (
     <>
       <section className="doubts__header">
@@ -55,7 +57,7 @@ const Doubts = ({ pageWidth }) => {
             )}
           </div>
           <div className="doubts__column" id="form-doubts">
-            <Form />
+            <Form setIsLoading={setIsLoading} />
           </div>
         </div>
       </section>

@@ -1,15 +1,16 @@
-import React from "react";
+import { useSelector } from "react-redux";
 import Form from "../form/form";
-import "./promo.css";
 import promoImage from "../../images/largeImages/promo_image.svg";
 import promoImageTablet from "../../images/largeImages/promoImageTablet.svg";
 import promoImageMobile from "../../images/largeImages/promoImageMobile.svg";
+import "./promo.css";
 
-const Promo = ({ pageWidth }) => {
+const Promo = ({ setIsLoading }) => {
+  const pageWidth = useSelector((state) => state.width.pageWidth);
   return (
     <section>
       <div className="promo__container" id="form-promo">
-        <Form />
+        <Form setIsLoading={setIsLoading} />
         {pageWidth < 990 ? (
           <div className="promo__image-and-text">
             <div className="promo__text-block">

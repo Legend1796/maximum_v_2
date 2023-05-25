@@ -3,6 +3,8 @@ import Doubts from "../components/doubts/doubts";
 import Economy from "../components/economy/economy";
 import Experience from "../components/experience/experience";
 import Feedback from "../components/feedback/feedback";
+import FormPopup from "../components/form/formPopup/formPopup";
+import Spinner from "../components/form/spinner/spinner";
 import Found from "../components/found/found";
 import Individual from "../components/individual/individual";
 import Manager from "../components/manager/manager";
@@ -15,6 +17,7 @@ import Variants from "../components/variants/variants";
 
 function Main({ pageWidth }) {
   const [popupOpen, setPopupOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleOpen = () => {
     setPopupOpen(true);
@@ -26,18 +29,20 @@ function Main({ pageWidth }) {
   return (
     <div className="Main">
       <Title />
-      <Promo pageWidth={pageWidth} />
-      <NotSellers pageWidth={pageWidth} />
-      <Experience pageWidth={pageWidth} />
-      <Economy pageWidth={pageWidth} isOpen={handleOpen} />
+      <Promo setIsLoading={setIsLoading} />
+      <NotSellers />
+      <Experience />
+      <Economy isOpen={handleOpen} />
       <Feedback />
       <Manager />
-      <Seller pageWidth={pageWidth} />
+      <Seller setIsLoading={setIsLoading} />
       <Variants />
-      <Found pageWidth={pageWidth} />
+      <Found setIsLoading={setIsLoading} />
       <Individual />
-      <Doubts pageWidth={pageWidth} />
+      <Doubts setIsLoading={setIsLoading} />
       <Popup isOpen={popupOpen} onClose={handleClose} />
+      <Spinner openSpinner={isLoading} />
+      <FormPopup />
     </div>
   );
 }

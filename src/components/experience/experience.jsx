@@ -1,5 +1,5 @@
-import React from "react";
-import "./experience.css";
+import { Link } from "react-scroll";
+import { useSelector } from "react-redux";
 import laser from "../../images/grid/1.svg";
 import lathes from "../../images/grid/2.svg";
 import milling from "../../images/grid/3.svg";
@@ -15,9 +15,10 @@ import sand from "../../images/grid/12.svg";
 import pipe from "../../images/grid/13.svg";
 import spare from "../../images/grid/14.svg";
 import Button from "../ui/button";
-import { Link } from "react-scroll";
+import "./experience.css";
 
-const Experience = ({ pageWidth }) => {
+const Experience = () => {
+  const pageWidth = useSelector((state) => state.width.pageWidth);
   return (
     <section>
       <div className="exp__container">

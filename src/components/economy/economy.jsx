@@ -1,10 +1,11 @@
-import React from "react";
-import "./economy.css";
 import economy from "../../images/largeImages/economy_image.svg";
+import { useSelector } from "react-redux";
 import Button from "../ui/button";
 import { Link } from "react-scroll";
+import "./economy.css";
 
-const Economy = ({ pageWidth, isOpen }) => {
+const Economy = ({ isOpen }) => {
+  const pageWidth = useSelector((state) => state.width.pageWidth);
   return (
     <section className="economy">
       {pageWidth > 960 ? (
@@ -54,7 +55,7 @@ const Economy = ({ pageWidth, isOpen }) => {
                 <h4 className="economy__table-usd">8 955 USD</h4>
               </div>
             </div>
-            <button className="economy__button" type="button">
+            <button className="economy__button" type="button" onClick={isOpen}>
               <p className="economy__button-text">Детализация</p>
             </button>
           </div>

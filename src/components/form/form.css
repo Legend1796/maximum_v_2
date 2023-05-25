@@ -1,3 +1,23 @@
+.button {
+    min-width: 160px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: var(--color-yellow);
+    color: #000;
+}
+
 .react-dadata__input {
     padding-left: 15px;
     width: 360px;
@@ -119,7 +139,7 @@
 .button__file {
     align-self: flex-start;
     position: relative;
-    width: 144px;
+    min-width: 160px;
     height: 40px;
     border-radius: 10px;
     display: flex;
@@ -130,17 +150,11 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
     margin-bottom: 24px;
     background-color: var(--color-black);
     color: #FFFFFF;
-}
-
-.form__button-text{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
 }
 
 .form__add-file-input {
@@ -157,6 +171,14 @@
     margin: 17px auto 23px;
 }
 
+.form__added-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    max-width: 300px;
+}
+
 .form__delete-file {
     margin-left: 10px;
     outline: none;
@@ -167,7 +189,23 @@
 
 .form__delete-file:hover {
     background: none;
-} 
+}
+
+.form__size_active {
+    display: block;
+    color: red;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    width: 230px;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.form__size {
+    display: none;
+}
 
 @media screen and (max-width: 1439px) {
     .form__container {
@@ -251,6 +289,14 @@
 
     .form__text {
         width: 257px;
+    }
+
+    .form__added-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        max-width: 220px;
     }
     
 }

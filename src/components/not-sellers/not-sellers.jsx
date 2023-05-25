@@ -1,8 +1,8 @@
-import "./not-sellers.css";
 import china from "../../images/not-sellers/china.svg";
 import analyze from "../../images/not-sellers/analyze.svg";
 import pig from "../../images/not-sellers/pig.svg";
 import zip from "../../images/not-sellers/zip.svg";
+import "./not-sellers.css";
 
 const NotSellers = () => {
   return (

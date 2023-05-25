@@ -1,36 +1,36 @@
 import "./app.css";
 import Main from "../../pages/main";
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Header from "../header/header";
 import NotFound from "../../pages/notFound";
-import Send from "../../pages/send";
 import PersonalData from "../../pages/personal-data";
 import ScrollToTop from "../scroll-to-top/scroll-to-top";
 import Footer from "../footer/footer";
-import Success from "../../pages/success";
+import { useDispatch } from "react-redux";
 
 function App() {
   const [pageWidth, setPageWidth] = useState(document.documentElement.scrollWidth);
   window.onresize = newPageSize;
+  const dispatch = useDispatch();
 
   function newPageSize() {
     setTimeout(() => {
+      changePageWidth();
       setPageWidth(document.documentElement.scrollWidth);
     }, 1000);
   }
 
-  useEffect(() => {
-    console.log(pageWidth);
-  }, [pageWidth]);
+  const changePageWidth = () => {
+    dispatch({ type: "changePageWidth", payload: document.documentElement.scrollWidth });
+  };
+
   return (
     <div className="App">
-      <Header pageWidth={pageWidth} />
+      <Header />
       <ScrollToTop height={0} />
       <Routes>
         <Route exact path="/" element={<Main pageWidth={pageWidth} />} />
-        <Route exact path="/send" element={<Send />} />
-        <Route exact path="/success" element={<Success />} />
         <Route exact path="/personal-data" element={<PersonalData />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

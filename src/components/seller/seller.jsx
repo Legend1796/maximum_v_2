@@ -1,10 +1,12 @@
+import { useSelector } from "react-redux";
 import sale from "../../images/largeImages/sale_image.svg";
 import saleTablet from "../../images/largeImages/sale_image_tablet.svg";
 import saleMobile from "../../images/largeImages/sale_image_mobile.svg";
 import Form from "../form/form";
 import "./seller.css";
 
-const Seller = ({ pageWidth }) => {
+const Seller = ({ setIsLoading }) => {
+  const pageWidth = useSelector((state) => state.width.pageWidth);
   return (
     <section className="seller">
       <div className="seller__container">
@@ -34,7 +36,7 @@ const Seller = ({ pageWidth }) => {
           )}
         </div>
         <div className="seller__column" id="form-seller">
-          <Form />
+          <Form setIsLoading={setIsLoading} />
         </div>
       </div>
     </section>

@@ -8,12 +8,8 @@ import Item from "./item/item";
 
 class Individual extends Component {
   render() {
-    // const Individual = ({ pageWidth }) => {
     const settings = {
       dots: true,
-      //   arrows: false,
-      //   nextArrow: false,
-      //   prevArrow: false,
       infinite: true,
       speed: 500,
       slidesToShow: 1,

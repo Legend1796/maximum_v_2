@@ -1,9 +1,8 @@
-import React from "react";
-import "./manager.css";
 import manager from "../../images/photo_1.png";
 import list from "../../images/icons/list.svg";
 import Button from "../ui/button";
 import { Link } from "react-scroll";
+import "./manager.css";
 
 const Manager = () => {
   return (

@@ -1,16 +1,18 @@
+import { useSelector } from "react-redux";
 import yourself from "../../images/largeImages/yourself_image.svg";
 import yourselfTablet from "../../images/largeImages/yourself_image_tablet.svg";
 import yourselfMobile from "../../images/largeImages/yourself_image_mobile.svg";
 import Form from "../form/form";
 import "./found.css";
 
-const Found = ({ pageWidth }) => {
+const Found = ({ setIsLoading }) => {
+  const pageWidth = useSelector((state) => state.width.pageWidth);
   return (
     <section className="found">
       <h2 className="found__title">Уже нашли оборудование самостоятельно?</h2>
       <div className="found__container">
         <div className="found__column">
-          <Form />
+          <Form setIsLoading={setIsLoading} />
         </div>
         <div className="found__column_one">
           {pageWidth > 959 ? (

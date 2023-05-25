@@ -1,12 +1,14 @@
-import "./header.css";
 import logo from "../../images/logo.svg";
 import tg from "../../images/icons/tg.svg";
 import wa from "../../images/icons/wa.svg";
 import { NavLink } from "react-router-dom";
 import { Element, Link } from "react-scroll";
+import { useSelector } from "react-redux";
 import Button from "../ui/button";
+import "./header.css";
 
-function Header({ pageWidth }) {
+function Header() {
+  const pageWidth = useSelector((state) => state.width.pageWidth);
   return (
     <header className="header">
       <div className="header__container">
