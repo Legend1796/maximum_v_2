@@ -86,11 +86,12 @@ const Form = ({ setIsLoading }) => {
     });
     formData.append("comment", comment);
     try {
-      await axios.post("https://maximum-logistics.ru/api/v1/orders/", formData, {
+      const res = await axios.post("https://maximum-logistics.ru/api/v1/orders/", formData, {
         headers: {
           "Content-type": "multipart/form-data",
         },
       });
+      console.log(res.status);
       setPopupOpened();
       setIsLoading(false);
       sendSuccess();
@@ -201,7 +202,7 @@ const Form = ({ setIsLoading }) => {
         </button>
         <div className=" form__text form__text_agreement">
           Нажимая кнопку “Оставить заявку” вы соглашаетесь с&nbsp;
-          <Link to="/personal-data" className="form__agreement-text-link">
+          <Link to="/personal-data" className="form__agreement-text-link" data-testid="personal-link">
             политикой конфиденциальности
           </Link>
         </div>
