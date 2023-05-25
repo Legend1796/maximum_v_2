@@ -57,7 +57,7 @@ const Doubts = ({ setIsLoading }) => {
             )}
           </div>
           <div className="doubts__column" id="form-doubts">
-            <Form setIsLoading={setIsLoading} />
+            <Form setIsLoading={setIsLoading} testId="personal-link" />
           </div>
         </div>
       </section>

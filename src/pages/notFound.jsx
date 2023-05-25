@@ -4,7 +4,7 @@ import "./anotherPages.css";
 
 function NotFound() {
   return (
-    <section className="notFound">
+    <section className="notFound" data-testid="not-page">
       <div className="notfound__container">
         <img src={notfoundImage} alt="notfound" className="notfound__image" />
         <h3 className="notfound__title">Не удалось найти страницу</h3>

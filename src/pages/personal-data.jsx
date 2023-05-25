@@ -2,7 +2,7 @@ import "./anotherPages.css";
 
 function PersonalData() {
   return (
-    <section className="personal">
+    <section className="personal" data-testid="personal">
       <div className="policy__container">
         <h1 className="policy__title">СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ</h1>
         <p className="policy__text">

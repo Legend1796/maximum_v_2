@@ -1,18 +1,48 @@
 import { render, screen } from "@testing-library/react";
 import App from "../../components/app/app";
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import { store } from "../store";
+import "@testing-library/jest-dom";
+import userEvent from "@testing-library/user-event";
+import { act } from "react-dom/test-utils";
 
-describe("test App", () => {
-  test("Router test", () => {
+window.scrollTo = jest.fn();
+
+describe("Routs test", () => {
+  test("personal-data test", () => {
     render(
-      <BrowserRouter>
-        <Provider store={store}>
+      <Provider store={store}>
+        <MemoryRouter initialEntries={["/personal-data"]}>
           <App />
-        </Provider>
-      </BrowserRouter>
+        </MemoryRouter>
+      </Provider>
     );
-    const link = screen.getAllByTestId("personal-link");
+    expect(screen.getByTestId("personal")).toBeInTheDocument();
   });
+
+  test("Not found test", () => {
+    render(
+      <Provider store={store}>
+        <MemoryRouter initialEntries={["/ascwe"]}>
+          <App />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    expect(screen.getByTestId("not-page")).toBeInTheDocument();
+  });
+
+  //   test("personal-data link test", () => {
+  //     render(
+  //       <Provider store={store}>
+  //         <MemoryRouter>
+  //           <App />
+  //         </MemoryRouter>
+  //       </Provider>
+  //     );
+  //     const link = screen.getByTestId("personal-link");
+  //     userEvent.click(link);
+  //     expect(screen.getByTestId("personal")).toBeInTheDocument();
+  //   });
 });

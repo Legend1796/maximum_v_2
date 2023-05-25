@@ -9,7 +9,7 @@ import axios from "axios";
 import delFile from "../../images/delFile.svg";
 import "./form.css";
 
-const Form = ({ setIsLoading }) => {
+const Form = ({ setIsLoading, testId }) => {
   const dispatch = useDispatch();
   const [isValidForm, setIsValidForm] = useState(false);
   const [email, setEmail] = useState();
@@ -53,7 +53,6 @@ const Form = ({ setIsLoading }) => {
   useEffect(() => {
     if (email && name) {
       setIsValidForm(email.value && phone.length > 10 && name.value && checked && filesSizeValid);
-      console.log(filesSizeValid);
     }
   }, [name, email, phone, checked, filesSizeValid]);
 
@@ -61,10 +60,8 @@ const Form = ({ setIsLoading }) => {
     let filesSize = 0;
     files.forEach((file) => (filesSize = filesSize + file.size / 1024 / 1024));
     if (filesSize < maxFilesSize) {
-      console.log("filesSize < maxFilesSize", filesSize);
       setFilesSizeValid(true);
     } else {
-      console.log("filesSize > maxFilesSize", filesSize);
       setFilesSizeValid(false);
     }
   }, [files]);
@@ -202,7 +199,7 @@ const Form = ({ setIsLoading }) => {
         </button>
         <div className=" form__text form__text_agreement">
           Нажимая кнопку “Оставить заявку” вы соглашаетесь с&nbsp;
-          <Link to="/personal-data" className="form__agreement-text-link" data-testid="personal-link">
+          <Link to="/personal-data" data-testid={testId} className="form__agreement-text-link">
             политикой конфиденциальности
           </Link>
         </div>
