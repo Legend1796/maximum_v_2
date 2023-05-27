@@ -6,12 +6,12 @@
 }
 
 .title__title {
-    margin: 8px auto 24px;
+    margin: -4px auto 48px;
 }
 
 .title__sale {
     padding-top: 8px;
-    margin-top: 30px;
+    margin-top: 4px;
     display: flex;
     justify-content: center;
     width: 509px;
@@ -19,7 +19,6 @@
 }
 
 .title__sale-text {
-    font-style: italic;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;

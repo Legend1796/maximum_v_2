@@ -1,27 +1,32 @@
 .header__container {
     width: 1160px;
-    margin: 20px auto 72px;
+    margin: 20px auto 68px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    border-bottom: 1px solid var(--color-underline);
-    padding-bottom: 33px;
+    border-bottom: 2px solid var(--color-underline);
+    padding-bottom: 24px;
 }
 
 .header__logo-and-desc {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 388px;
+}
+
+.header__logo {
+    width: 186px;
+    height: 40px;
 }
 
 .header__description {
-    justify-self: flex-start;
-    margin-left: 14px;
+    margin-left: 12px;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    width: 222px;
+    font-size: 12px;
+    line-height: 15px;
+    width: 190px;
     text-align: start;
 }
 
@@ -40,15 +45,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+    border-radius: 10px;
     color: var(--color-black);
 }
 
+.header__tg-color:hover {
+    fill: #028FD3;
+}
+
+.header__wa-color:hover {
+    fill: #18C13A;
+}
+
 .header__link_phone {
-    margin-left: 45px;
-    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    margin-right: 67px;
 }
 
 .header__link_modal {
@@ -58,15 +70,27 @@
 }
 
 .header__contacts {
+    width: 322px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
 }
 
-.header__image {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
+.header__button {
+    width: 170px;
+}
+
+.header__button-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.header__mes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
 }
 
 @media screen and (max-width: 1439px) {
@@ -81,29 +105,6 @@
 .header__link_phone {
     margin: 0;
 }
-    /* .header__links {
-        gap: 27px;
-    }
-    
-    .header__link {
-        height: 40px;
-    }
-
-    
-    .header__phone {
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 140%;
-        margin-left: 9px;
-    }
-    
-    .header__contacts {
-        gap: 0;
-    }
-    
-    .header__link_wa {
-        margin-right: 16px;
-    } */
 }
 
 @media screen and (max-width: 959px) {
@@ -114,7 +115,12 @@
         margin-bottom: 40px;
     }
 
+    .header__contacts {
+        width: 280px;
+    }
+
     .header__logo-and-desc {
+        width: 280px;
         flex-direction: column;
     }
         
@@ -129,7 +135,6 @@
     }
 
     .header__link_phone {
-        margin-left: 12px;
         margin-right: 0;
     }
 

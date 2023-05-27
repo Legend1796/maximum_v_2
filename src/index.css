@@ -13,6 +13,9 @@
     --color-blue: #2FBAE5;
     --color-white: #FFFFFF;
     --color-yellow: #FFD24D;
+    --color-btn-hover: #FFC005;
+    --color-btn-disabled: #757575;
+    --color-btn-file: #4C4C4C;
 }
 
 h1 {
@@ -72,12 +75,7 @@ body, button {
 }
 
 button:hover {
-    background-color: #CA9B2B;
-    color: #ffffff;
-}
-
-button:active {
-    background-color: #936E00;
+    background-color: #FFC005;
 }
 
 @media screen and (max-width: 1439px) {

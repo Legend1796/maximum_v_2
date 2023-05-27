@@ -71,7 +71,7 @@
     height: 39px;
     border-radius: 10px;
     border: 1px solid #026786;
-    background: none;
+    background-color:var(--color-white);
     outline: none;
     cursor: pointer;
     color: #026786;
@@ -84,7 +84,8 @@
 
 .economy__button:hover {
     color: var(--color-white);
-    background-color: #026786;
+    border: 1px solid #139DC8;
+    background-color: #139DC8;
 }
 
 .economy__button:active {

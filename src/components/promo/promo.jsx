@@ -10,7 +10,6 @@ const Promo = ({ setIsLoading }) => {
   return (
     <section>
       <div className="promo__container" id="form-promo">
-        <Form setIsLoading={setIsLoading} />
         {pageWidth < 990 ? (
           <div className="promo__image-and-text">
             <div className="promo__text-block">
@@ -66,6 +65,7 @@ const Promo = ({ setIsLoading }) => {
             </div>
           </div>
         )}
+        <Form setIsLoading={setIsLoading} />
       </div>
     </section>
   );
