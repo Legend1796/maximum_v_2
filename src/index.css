@@ -18,6 +18,10 @@
     --color-btn-file: #4C4C4C;
 }
 
+section {
+    margin-bottom: 160px;
+}
+
 h1 {
     font-weight: 900;
     font-size: 100px;

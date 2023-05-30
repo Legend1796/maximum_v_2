@@ -1,4 +1,6 @@
-import manager from "../../images/photo_1.png";
+import sofia from "../../images/managers/sofia.png";
+import vladimir from "../../images/managers/vladimir.png";
+import nasty from "../../images/managers/nasty.png";
 import list from "../../images/icons/list.svg";
 import Button from "../ui/button";
 import { Link } from "react-scroll";
@@ -8,85 +10,21 @@ const Manager = () => {
   return (
     <section className="manager">
       <h2 className="manager__title">ВСЕ ВОПРОСЫ РЕШАЕТ ПЕРСОНАЛЬНЫЙ МЕНЕДЖЕР</h2>
-      <div className="manager__managers">
-        <div className="manager__managers-container">
-          <ul>
-            <li className="manager__man">
-              <img src={manager} alt="manager" className="manager__photo" />
-              <div className="manager__about">
-                <p className="manager__surname">Aaaaaaaaaaa</p>
-                <p className="manager__name">Aaaaaaaaaaa</p>
-              </div>
-            </li>
-            <li className="manager__man">
-              <img src={manager} alt="manager" className="manager__photo" />
-              <div className="manager__about">
-                <p className="manager__surname">Bbbbbbbbbbb</p>
-                <p className="manager__name">Bbbbbbbbbbb</p>
-              </div>
-            </li>
-            <li className="manager__man">
-              <img src={manager} alt="manager" className="manager__photo" />
-              <div className="manager__about">
-                <p className="manager__surname">Cccccccccc</p>
-                <p className="manager__name">Cccccccccc</p>
-              </div>
-            </li>
-            <li className="manager__man">
-              <img src={manager} alt="manager" className="manager__photo" />
-              <div className="manager__about">
-                <p className="manager__surname">Dddddddddd</p>
-                <p className="manager__name">Dddddddddd</p>
-              </div>
-            </li>
-          </ul>
-          <ul>
-            <li className="manager__man">
-              <img src={manager} alt="manager" className="manager__photo" />
-              <div className="manager__about">
-                <p className="manager__surname">Aaaaaaaaaaa</p>
-                <p className="manager__name">Aaaaaaaaaaa</p>
-              </div>
-            </li>
-            <li className="manager__man">
-              <img src={manager} alt="manager" className="manager__photo" />
-              <div className="manager__about">
-                <p className="manager__surname">Bbbbbbbbbbb</p>
-                <p className="manager__name">Bbbbbbbbbbb</p>
-              </div>
-            </li>
-            <li className="manager__man">
-              <img src={manager} alt="manager" className="manager__photo" />
-              <div className="manager__about">
-                <p className="manager__surname">Cccccccccc</p>
-                <p className="manager__name">Cccccccccc</p>
-              </div>
-            </li>
-            <li className="manager__man">
-              <img src={manager} alt="manager" className="manager__photo" />
-              <div className="manager__about">
-                <p className="manager__surname">Dddddddddd</p>
-                <p className="manager__name">Dddddddddd</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+
       <div className="manager__container">
         <div className="manager__desc">
           <ul className="manager__works">
             <li className="manager__work">
               <img src={list} alt="list" />
-              <div className="manager__text">
-                Оформит заключение контракта, организует логистику и таможенные платежи с учетом особенностей импорта
-                данного товара на территорию РФ
-              </div>
+              <div className="manager__text">Осуществит расчет себестоимости импорта</div>
             </li>
             <li className="manager__work">
               <img src={list} alt="list" />
-              <div className="manager__text">
-                Поможет с уточнением любой, в том числе технической информации у выбранного поставщика
-              </div>
+              <div className="manager__text">Организует логистику и таможенные платежи</div>
+            </li>
+            <li className="manager__work">
+              <img src={list} alt="list" />
+              <div className="manager__text">Оформит заключение контракта</div>
             </li>
             <li className="manager__work">
               <img src={list} alt="list" />
@@ -96,11 +34,11 @@ const Manager = () => {
           <ul className="manager__works">
             <li className="manager__work">
               <img src={list} alt="list" />
-              <div className="manager__text">Осуществит расчет себестоимости импорта от выбранных поставщиков</div>
+              <div className="manager__text">Уточнить техническую информацию, для выбранного продукта</div>
             </li>
             <li className="manager__work">
               <img src={list} alt="list" />
-              <div className="manager__text">Всегда на связи и ответит на любые ваши вопросы</div>
+              <div className="manager__text">Всегда на связи и ответит на любые вопросы</div>
             </li>
             <li className="manager__work">
               <img src={list} alt="list" />
@@ -112,6 +50,32 @@ const Manager = () => {
             </li>
           </ul>
         </div>
+        <ul className="manager__managers">
+          <li className="manager__man">
+            <img src={sofia} alt="manager" className="manager__photo" />
+            <div className="manager__about">
+              <h4 className="manager__name">Бородяева София</h4>
+              <p className="manager__job">Менеджер</p>
+              <p className="manager__country">Направление: Китай</p>
+            </div>
+          </li>
+          <li className="manager__man">
+            <img src={vladimir} alt="manager" className="manager__photo" />
+            <div className="manager__about">
+              <h4 className="manager__name">Бородяева София</h4>
+              <p className="manager__job">Менеджер</p>
+              <p className="manager__country">Направление: Китай</p>
+            </div>
+          </li>
+          <li className="manager__man">
+            <img src={nasty} alt="manager" className="manager__photo" />
+            <div className="manager__about">
+              <h4 className="manager__name">Бородяева София</h4>
+              <p className="manager__job">Менеджер</p>
+              <p className="manager__country">Направление: Китай</p>
+            </div>
+          </li>
+        </ul>
         <div className="manager__button-container">
           <Link className="promo__button" to="form-seller" spy={true} smooth={true} offset={-120} duration={400}>
             <Button type="button" typeButton="primary">

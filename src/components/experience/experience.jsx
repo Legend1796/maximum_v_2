@@ -20,7 +20,7 @@ import "./experience.css";
 const Experience = () => {
   const pageWidth = useSelector((state) => state.width.pageWidth);
   return (
-    <section>
+    <section className="exp">
       <div className="exp__container">
         <h2 className="exp__title">
           {pageWidth > 959
@@ -90,7 +90,9 @@ const Experience = () => {
             <p className="exp__text">Запчасти для станков лазерной резки</p>
           </li>
         </ul>
-        <h4 className="exp__bottom-title">Мне нужно металлообрабатывающее оборудование</h4>
+        <h4 className="exp__bottom-title">
+          <span className="exp__bottom-title_blue">Мне нужно </span>металлообрабатывающее оборудование
+        </h4>
         <div className="bottom__container">
           <Link className="promo__button" to="form-seller" spy={true} smooth={true} offset={-120} duration={1400}>
             <Button type="button" typeButton="primary">

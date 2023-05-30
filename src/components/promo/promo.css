@@ -1,3 +1,9 @@
+.promo__lines {
+    position: absolute;
+    left: -25px;
+    top: -40px;
+}
+
 .promo__container {
     width: 1160px;
     display: flex;
