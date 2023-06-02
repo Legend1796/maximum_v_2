@@ -1,7 +1,3 @@
-.seller {
-    margin-bottom: 120px;
-}
-
 .seller__container {
     width: 1240px;
     margin: 0 auto;
@@ -21,8 +17,7 @@
 
 .seller__subtitle {
     width: 605px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 24px;
 }
 
 .seller__text {

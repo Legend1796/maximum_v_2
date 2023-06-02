@@ -168,7 +168,6 @@ const Form = ({ setIsLoading, testId }) => {
             rows="5"
             onChange={(e) => setComment(e.target.value)}></textarea>
         </div>
-        <p className="form__text">Техническое задание, Invoice, Packing list если есть</p>
         <div className="form__added">
           {files.map((file) => {
             return (

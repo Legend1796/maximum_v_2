@@ -18,12 +18,18 @@ function Header() {
               <img src={logo} alt="logo" className="header__logo" />
             </NavLink>
           </Element>
-          <p className="header__description">Организация импорта для промышленных предприятий</p>
+          <p className="header__description" itemscope itemtype="http://schema.org/Organization">
+            <span itemprop="slogan">Организация импорта для промышленных предприятий</span>
+          </p>
         </div>
         {pageWidth >= 960 ? (
           <>
-            <a href="tel:+7 812 200 46 43" className="header__link header__link_phone">
-              <h6>+ 7 812 200 46 43</h6>
+            <a
+              href="tel:+7 812 200 46 43"
+              className="header__link header__link_phone"
+              itemscope
+              itemtype="http://schema.org/Organization">
+              <h6 itemprop="telephone">+ 7 812 200 46 43</h6>
             </a>
             <div className="header__contacts">
               <div className="header__mes">
@@ -96,8 +102,12 @@ function Header() {
                   </svg>
                 </a>
               </div>
-              <a href="tel:+7 812 200 46 43" className="header__link header__link_phone">
-                <h6>+ 7 812 200 46 43</h6>
+              <a
+                href="tel:+7 812 200 46 43"
+                className="header__link header__link_phone"
+                itemscope
+                itemtype="http://schema.org/Organization">
+                <h6 itemprop="telephone">+ 7 812 200 46 43</h6>
               </a>
             </div>
             <Button type="button" typeButton="primary">

@@ -1,5 +1,5 @@
 .button {
-    min-width: 160px;
+    width: 100%;
     height: 40px;
     border-radius: 10px;
     display: flex;
@@ -69,7 +69,7 @@
 }
 
 .input__container {
-    margin: 35px auto 21px;
+    margin: 32px auto 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -137,9 +137,8 @@
 }
 
 .button__file {
-    align-self: flex-start;
     position: relative;
-    min-width: 160px;
+    width: 100%;
     height: 40px;
     border-radius: 10px;
     display: flex;

@@ -12,11 +12,7 @@ const Seller = ({ setIsLoading }) => {
       <div className="seller__container">
         <div className="seller__column_one">
           <h2 className="seller__title">ВАША ЭКОНОМИЯ ОКОЛО 40%</h2>
-          <h5 className="seller__subtitle">На основе внутреннего анализа всех поставок за прошедшие 3 года</h5>
-          <p className="seller__text">
-            Вы получите максимальное количество коммерческих предложений зарубежных производителей необходимого вам
-            оборудования или материалов
-          </p>
+          <h5 className="seller__subtitle">На основе нашего внутреннего анализа всех поставок за прошедшие 3 года</h5>
           {pageWidth > 959 ? (
             <>
               <img src={pageWidth > 1439 ? sale : saleTablet} alt="sale_image" className="seller__sale_image" />

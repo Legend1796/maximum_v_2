@@ -1,7 +1,3 @@
-.variants {
-    background-color: var(--color-blue);
-}
-
 .variants__container {
     margin: 0 auto 120px;
     display: flex;
@@ -14,8 +10,8 @@
 }
 
 .variants__title {
-    color: var(--color-white);
-    margin: 64px auto;
+    color: var(--color-yellow);
+    margin-bottom: 80px;
 }
 
 .variants__cards {

@@ -1,19 +1,28 @@
 .economy {
     background-color: var(--color-blue);
-    padding-bottom: 63px;
 }
 
 .economy__container {
     width: 1160px;
-    padding: 62px 0 84px;
+    padding: 64px 0;
     margin: 0 auto;
     text-align: left;
     display: flex;
     justify-content: space-between;
 }
 
+.economy__column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .economy__title {
     color: var(--color-white);
+}
+
+.economy__title_span {
+    color: var(--color-yellow);
 }
 
 .economy__subtitle {
@@ -22,19 +31,24 @@
 }
 
 .economy__text {
-    width: 568px;
+    width: 489px;
+    text-align: right;
     color: var(--color-white);
-    margin-bottom: 60px;
+    margin-bottom: 80px;
+}
+
+.economy__text_span {
+    color: var(--color-btn-file);
 }
 
 .economy__table {
     display: flex;
     gap: 7px;
     color: var(--color-white);
+    margin-bottom: 48px;
 }
 
 .economy__table-column {
-    border: 1px solid var(--color-white);
     text-align: center;
     width: 300px;
 }
@@ -46,7 +60,9 @@
 .economy__table-title {
     padding-top: 14px;
     padding-bottom: 16px;
-    border-bottom: 1px solid var(--color-white);
+    border: 1px solid var(--color-btn-file);
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--color-btn-file);
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
@@ -58,7 +74,10 @@
     line-height: 29px;
     padding-top: 20px;
     padding-bottom: 21px;
-    color: var(--color-white);
+    color: var(--color-btn-file);
+    border: 1px solid var(--color-white);
+    background-color: var(--color-white);
+    border-radius: 0px 0px 10px 10px;
 }
 
 .economy__image {
@@ -93,22 +112,6 @@
     background-color: #139DC8;
 }
 
-.economy__bottom {
-    border-top: 2px solid var(--color-white);
-    width: 1160px;
-    margin: 0 auto;
-    padding-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.economy__bottom-title {
-    color: var(--color-white);
-    margin-bottom: 57px;
-}
-
 @media screen and (max-width: 1439px) {
     .economy {
         width: 100%;
@@ -119,21 +122,11 @@
         padding: 92px 0 32px;
     }
 
-    .economy__bottom {
-        width: 940px;
-    }
-
     .economy__image {
         width: 328px;
         height: 376px;
         margin: 0;
     }
-
-    .economy__bottom-title {
-        width: 898px;
-        margin-bottom: 57px;
-}
-    
 }
 
 @media screen and (max-width: 959px) {
@@ -149,11 +142,6 @@
         height: 308px;
         margin: 0;
         margin-bottom: 64px;
-    }
-
-    .economy__bottom-title {
-        width: 898px;
-        margin-bottom: 57px;
     }
 
     .economy__subtitle {
@@ -183,15 +171,5 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .economy__bottom {
-        padding-top: 32px;
-        width: 300px;
-    }
-
-    .economy__bottom-title {
-        width: 300px;
-        margin-bottom: 32px;
     }
 }
